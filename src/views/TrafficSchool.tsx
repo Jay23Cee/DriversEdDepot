@@ -17,7 +17,7 @@ function TrafficSchool() {
               Traffic schools offer invaluable courses aimed at improving driving skills, promoting road safety, and helping drivers to dismiss traffic tickets. Enrolling in a traffic school can lead to many benefits, including possible insurance discounts and a better understanding of traffic laws and procedures.
             </p>
             <p className="text-[16px] font-inter text-center text-[#6c757d]">
-              To discover high-quality, affordable traffic school courses, visit <a href="https://lowbudget-trafficschool-zs17.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-orange-main">Low Budget Traffic School</a>.
+              To discover high-quality, affordable traffic school courses, visit <a href="https://lowbudget-trafficschool-zs17.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-brand-secondary">Low Budget Traffic School</a>.
             </p>
           </div>
         </div>

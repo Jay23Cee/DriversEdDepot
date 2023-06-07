@@ -26,7 +26,7 @@ module.exports = {
       colors: {
         brand: {
           primary: "#fd4c1d",
-          secoundary: "",
+          secondary: "#F39F02",
         },
         white: {
           main: "#FFFFFF",
