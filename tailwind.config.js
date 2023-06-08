@@ -30,7 +30,7 @@ module.exports = {
         },
         white: {
           main: "#FFFFFF",
-          off: "#f5f5f5",
+          off: "#f6ebff",
           cool: "#faf4ff",
         },
         black: {

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function TrafficSchool() {
   return (
-    <Wrapper styles="bg-white-cool py-10">
+    <Wrapper styles="bg-white-off py-10">
       <div className="w-full grid gap-8 grid-cols-1 lg:grid-cols-[2fr,1.7fr]">
         {/* ====> left portion */}
         <div className="w-full flex flex-col gap-8">
