@@ -103,7 +103,7 @@ function CallToAction() {
 }
 
 
-const StatesOfUnited = [
+export const StatesOfUnited = [
   {
     name: "Alabama",
     path: "",
@@ -122,11 +122,11 @@ const StatesOfUnited = [
   },
   {
     name: "California",
-    path: "",
+    path: "https://nationalhighwaysafetyadministration.com/california-drivers-ed-online/?affiliateid=428",
   },
   {
     name: "Colorado",
-    path: "",
+    path: "https://nationalhighwaysafetyadministration.com/colorado-drivers-ed-online/?affiliateid=428",
   },
   {
     name: "Connecticut",
@@ -142,7 +142,7 @@ const StatesOfUnited = [
   },
   {
     name: "Georgia",
-    path: "",
+    path: "https://nationalhighwaysafetyadministration.com/georgia-joshua-law-driver-ed-online/?affiliateid=428",
   },
   {
     name: "Hawaii",
@@ -158,7 +158,7 @@ const StatesOfUnited = [
   },
   {
     name: "Indiana",
-    path: "",
+    path: "https://nationalhighwaysafetyadministration.com/indiana-driver-education-online/?affiliateid=428",
   },
   {
     name: "Iowa",
@@ -254,7 +254,7 @@ const StatesOfUnited = [
   },
   {
     name: "Pennsylvania",
-    path: "",
+    path: "https://nationalhighwaysafetyadministration.com/pennsylvania-driver-education/?affiliateid=428",
   },
   {
     name: "Rhode Island",
@@ -274,7 +274,7 @@ const StatesOfUnited = [
   },
   {
     name: "Texas",
-    path: "",
+    path: "https://nationalhighwaysafetyadministration.com/texas-instructor-taught-driver-education-course/?affiliateid=428",
   },
   {
     name: "Utah",
@@ -305,5 +305,6 @@ const StatesOfUnited = [
     path: "",
   },
 ];
+
 
 export default CallToAction;
