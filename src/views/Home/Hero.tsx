@@ -1,4 +1,6 @@
+'use client'
 import React, { useState, useEffect, useRef } from "react";
+import { useId } from 'react';
 import { FaCheckCircle } from "react-icons/fa";
 import Link from "next/link";
 import { GoLocation } from "react-icons/go";
@@ -8,6 +10,8 @@ import { StatesOfUnited } from "@/components/Shared/CallToAction/CallToAction";
 function Hero() {
   const [isLocationDropdownOpen, setLocationDropdownOpen] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState("");
+  const [path, setPath] = useState("");
+
 
   const locationDropdownRef = useRef<HTMLInputElement | null>(null);
 
@@ -16,7 +20,8 @@ function Hero() {
   };
 
   const handleLocationSelection = (location:any) => {
-    setSelectedLocation(location);
+    setSelectedLocation(location.name);
+    setPath(location.path)
     setLocationDropdownOpen(false);
   };
 
@@ -38,7 +43,7 @@ function Hero() {
           className={`cursor-pointer flex justify-start hover:text-brand-primary items-center gap-2 ${
             selectedLocation === option.name ? "text-brand-primary" : "text-black-main"
           } font-sans text-[16px] font-normal`}
-          onClick={() => handleLocationSelection(option.name)}
+          onClick={() => handleLocationSelection(option)}
         >
           <GoLocation className={`text-[22px] ${selectedLocation === option.name && "fill-brand-primary"}`} />
           {option.name}
@@ -87,7 +92,7 @@ function Hero() {
                 className="w-full h-[55px] border-[3px] placeholder:text-[18px] placeholder:font-medium text-[18px] font-inter font-medium px-2 rounded-[10px] focus:outline-none border-brand-primary"
                 type="text"
                 id="select-state"
-                value={selectedLocation}
+                defaultValue={selectedLocation}
                 placeholder="Select State"
               />
              <FiChevronDown
@@ -105,9 +110,16 @@ function Hero() {
             )}
           </div>
           {/* ===> get started button */}
-          <button className="w-full max-w-[240px] h-[55px] rounded-[10px] hover:opacity-70 bg-brand-primary">
-            <p className="text-[26px] font-inter capitalize text-white-main">Get Started</p>
-          </button>
+          <button
+  className="w-full max-w-[240px] h-[55px] rounded-[10px] hover:opacity-70 bg-brand-primary"
+  onClick={() => {
+    // Perform the desired action when the button is clicked
+    window.location.href = path
+  }}
+>
+  <p className="text-[26px] font-inter capitalize text-white-main">Get Started</p>
+</button>
+
         </div>
         {/* ===> */}
         <div className="flex flex-col">

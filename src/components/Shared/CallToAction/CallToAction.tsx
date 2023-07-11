@@ -8,7 +8,7 @@ function CallToAction() {
   const [isSticky, setIsSticky] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [location, setLocation] = useState("");
-
+  const [path, setPath] = useState("");
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.pageYOffset;
@@ -68,6 +68,7 @@ function CallToAction() {
                         key={index}
                         onClick={() => {
                           setLocation(option.name);
+                          setPath(option.path)
                           setIsOpen(false);
                         }}
                       >
@@ -88,14 +89,16 @@ function CallToAction() {
             )}
           </div>
           <button
-            className="w-[180px] h-[45px] bg-white-main rounded-[10px] hover:opacity-90 text-black-main capitalize text-[18px] font-medium"
-            onClick={() => {
-              // Copy the selected location to the clipboard
-              navigator.clipboard.writeText(location);
-            }}
-          >
-            get started
-          </button>
+  className="w-[180px] h-[45px] bg-white-main rounded-[10px] hover:opacity-90 text-black-main capitalize text-[18px] font-medium"
+  onClick={() => {
+    const selectedLocation = StatesOfUnited.find((state) => state.name === location);
+    if (selectedLocation && selectedLocation.path) {
+      window.location.href = path;
+    }
+  }}
+>
+  get started
+</button>
         </div>
       </div>
     </Wrapper>

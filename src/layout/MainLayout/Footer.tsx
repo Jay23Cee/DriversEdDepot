@@ -21,13 +21,11 @@ function Footer() {
         </div>
         {/* ====> social icons */}
         <div className="flex justify-center items-center gap-6 -mt-12 sm:-mt-10">
-          {Social.map((item, index) => {
-            return (
-              <>
-
-              </>
-            );
-          })}
+          {Social.map((item, index) => (
+            <React.Fragment key={index}>
+              {item.path}
+            </React.Fragment>
+          ))}
         </div>
         <p className="text-[16px] text-center font-medium font-inter text-black-main">
           © 1997-2023 DriversEd.com. All rights reserved. Please see our privacy
