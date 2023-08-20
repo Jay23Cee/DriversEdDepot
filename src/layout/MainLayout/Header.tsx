@@ -22,6 +22,7 @@ function Header() {
             src="/assets/logo.png"
             fill
             className="object-contain"
+        
             alt=""
           />
         </div>
@@ -48,6 +49,7 @@ function Header() {
           })}
         </div>
         <div className="flex justify-center items-center gap-4">
+          {/* =====> contact us button */}
 
 
           {/* ====> hamburger and drawer for small screen */}
@@ -70,7 +72,7 @@ function Header() {
                 <div className="w-full flex justify-between items-center">
                   {/* ===> logo */}
                   <p className="text-[35px] md:text-[50px] font-poppins font-semibold text-white-main">
-                    Logo.
+         
                   </p>
                   <RxCross2
                     onClick={() => setIsOpen(false)}
@@ -102,7 +104,6 @@ function Header() {
                 </div>
                 {/* ====> two buttons */}
                 <div className="flex justify-center items-center flex-col gap-8 mt-8">
-                  {/* =====> contact us button */}
 
                 </div>
               </div>

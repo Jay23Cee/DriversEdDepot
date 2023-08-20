@@ -11,14 +11,14 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {/* Google Analytics tracking code */}
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-SW3E647ZSQ"></script>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q95W0CG8M8"></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'G-SW3E647ZSQ');
+                gtag('config', 'G-Q95W0CG8M8');
               `,
             }}
           />
