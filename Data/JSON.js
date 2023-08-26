@@ -17,80 +17,75 @@ export const Data = {
   Attributes: [
     {
       img: "/assets/check.png",
-      name: "reliable and trusted driving schools",
+      name: "lowest price",
     },
     {
       img: "/assets/user.png",
-      name: "millions of satisfied customers worldwide",
+      name: "over 4m satisfied users",
     },
     {
       img: "/assets/sun.png",
-      name: "flexible scheduling options",
+      name: "same day processing",
     },
     {
       img: "/assets/fun.png",
-      name: "engaging and interactive learning experience",
+      name: "fun & interactive",
     },
     {
       img: "/assets/map.png",
-      name: "licensed and certified instructors",
+      name: "state licensed",
     },
     {
       img: "/assets/responsive.png",
-      name: "accessible on any device",
+      name: "can be taken on any device",
     },
   ],
   CoursesWeOffer: [
     {
       img: "/assets/course2.png",
-      name: "comprehensive driving courses",
+      name: "insurance reduction",
     },
     {
       img: "/assets/course1.png",
-      name: "specialized driving programs",
+      name: "mature driver courses",
     },
     {
       img: "/assets/course3.png",
-      name: "advanced driver training",
+      name: "fleet driver training courses",
     },
     {
       img: "/assets/course4.png",
-      name: "teen driver education",
+      name: "driver's ed courses",
     },
   ],
 
   faqs: {
-    title: "Driving School FAQs",
+    title: "Driving Faqs",
     rows: [
       {
-        title: "How do I enroll in a driving course?",
+        title: "What is Traffic?",
         content:
-          "To enroll in a driving course, simply visit our website and follow the enrollment instructions. It's a straightforward process that will guide you through selecting and registering for the course of your choice.",
+          "Traffic is an online education platform that offers a wide range of courses and learning materials to help you acquire new skills and knowledge from the comfort of your own home. ",
       },
       {
-        title: "What qualifications do your instructors have?",
+        title: "How does Traffic work?",
         content:
-          "Our instructors are highly qualified and certified professionals. They have extensive experience in teaching driving skills and follow the highest standards of instruction and safety.",
+          "Traffic provides a user-friendly interface where you can browse through various courses and enroll in the ones that interest you. Once enrolled, you gain access to the course materials, including video lectures, assignments, quizzes, and additional resources.",
       },
       {
-        title: "Are there courses for beginner drivers?",
+        title: "Are the courses on Traffic self-paced?",
         content:
-          "Yes, we offer courses specifically designed for beginner drivers. These courses cover the fundamentals of driving and help new drivers develop the necessary skills and confidence on the road.",
+          "Yes, Traffic offers self-paced courses, allowing you to learn at your own convenience. You can access the course materials whenever you want and progress through the content at your own speed.",
       },
       {
-        title: "Do you provide advanced driver training?",
+        title: "Can I interact with instructors on Traffic?",
         content:
-          "Absolutely! We offer advanced driver training courses for those looking to enhance their driving skills. These courses focus on advanced techniques, defensive driving, and handling challenging road conditions.",
+          "Absolutely! Traffic promotes student-instructor interaction through various means such as discussion forums, messaging systems, and live webinars. You can ask questions, seek clarification, and engage in discussions with instructors and fellow learners.",
       },
       {
-        title: "Can I choose a schedule that suits me?",
+        title: "Can I earn a certificate upon completion of a course?",
         content:
-          "Yes, we understand that everyone has different schedules and commitments. We offer flexible scheduling options, allowing you to choose lesson times that work best for you.",
-      },
-      {
-        title: "Will I receive a certificate upon completion?",
-        content:
-          "Yes, upon successfully completing a driving course with us, you will receive a certificate of completion. This certificate can be valuable for insurance discounts and demonstrating your commitment to safe driving.",
+          "Yes, Traffic provides certificates of completion for many courses. Once you successfully finish a course, you will receive a certificate that you can showcase on your resume or LinkedIn profile to highlight your newly acquired skills.",
       },
     ],
   },
