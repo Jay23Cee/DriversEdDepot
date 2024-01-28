@@ -1,91 +1,112 @@
 export const Data = {
   Navibar: [
     {
-      name: "home",
-      path: "home",
+      name: "Home",
+      path: "/", // Root path for the homepage
+      title: "Top-Rated Online Driving School - Expert Training & Certification"
     },
     {
-      name: "attributes",
-      path: "attributes",
+      name: "Why Choose Us",
+      path: "/why-choose-us", // Descriptive path with a clear intention
+      title: "Experienced Instructors and Flexible Driving Courses"
     },
     {
-      name: "faq",
-      path: "faqs",
+      name: "FAQs",
+      path: "/frequently-asked-questions", // Full phrase for clarity
+      title: "Comprehensive FAQs on Driving Education & Services"
     },
-
   ],
   Attributes: [
     {
       img: "/assets/check.png",
-      name: "lowest price",
+      alt: "Reliable and Trusted Driving Schools Icon",
+      name: "Reliable and Trusted",
+      description: "Our driving schools are renowned for reliability and trustworthiness, with a track record of success."
     },
     {
       img: "/assets/user.png",
-      name: "over 4m satisfied users",
+      alt: "Satisfied Customers Worldwide Icon",
+      name: "Millions of Satisfied Customers",
+      description: "Join millions of drivers worldwide who have enhanced their driving skills with us."
     },
     {
       img: "/assets/sun.png",
-      name: "same day processing",
+      alt: "Flexible Scheduling Options Icon",
+      name: "Flexible Scheduling",
+      description: "We offer a variety of scheduling options to fit your busy lifestyle, with courses available 24/7."
     },
     {
       img: "/assets/fun.png",
-      name: "fun & interactive",
+      alt: "Engaging Learning Experience Icon",
+      name: "Engaging Learning Experience",
+      description: "Our courses are designed to be engaging and interactive, making learning to drive enjoyable."
     },
     {
       img: "/assets/map.png",
-      name: "state licensed",
+      alt: "Licensed and Certified Instructors Icon",
+      name: "Licensed Instructors",
+      description: "Learn from the best with our team of licensed and certified driving instructors."
     },
     {
       img: "/assets/responsive.png",
-      name: "can be taken on any device",
+      alt: "Accessible on Any Device Icon",
+      name: "Tech-Friendly",
+      description: "Our driving courses are optimized for any device, enabling you to learn on the go."
     },
   ],
   CoursesWeOffer: [
     {
       img: "/assets/course2.png",
-      name: "insurance reduction",
+      alt: "Comprehensive Driving Courses Icon",
+      name: "Comprehensive Courses",
+      description: "Our wide range of driving courses covers everything from basic to advanced driving skills."
     },
     {
       img: "/assets/course1.png",
-      name: "mature driver courses",
+      alt: "Specialized Driving Programs Icon",
+      name: "Specialized Programs",
+      description: "Specialized driving programs tailored to meet individual needs, from teens to commercial drivers."
     },
     {
       img: "/assets/course3.png",
-      name: "fleet driver training courses",
+      alt: "Advanced Driver Training Icon",
+      name: "Advanced Training",
+      description: "Take your driving to the next level with our advanced driver training courses."
     },
     {
       img: "/assets/course4.png",
-      name: "driver's ed courses",
+      alt: "Teen Driver Education Icon",
+      name: "Teen Education",
+      description: "Our teen driver education programs focus on safety and confidence on the road."
     },
   ],
-
   faqs: {
-    title: "Driving Faqs",
+    title: "Driving School FAQs - Essential Information for Prospective Drivers",
+    description: "Get all your driving education questions answered with our detailed FAQs section.",
     rows: [
       {
-        title: "What is Traffic?",
-        content:
-          "Traffic is an online education platform that offers a wide range of courses and learning materials to help you acquire new skills and knowledge from the comfort of your own home. ",
+        title: "Enrolling in Driving Courses",
+        content: "Enrolling in our driving courses is easy and can be done directly on our website, with immediate access to course materials."
       },
       {
-        title: "How does Traffic work?",
-        content:
-          "Traffic provides a user-friendly interface where you can browse through various courses and enroll in the ones that interest you. Once enrolled, you gain access to the course materials, including video lectures, assignments, quizzes, and additional resources.",
+        title: "Instructor Qualifications",
+        content: "Our certified professional instructors are experienced in delivering high-quality driving education, ensuring you receive the best training possible."
       },
       {
-        title: "Are the courses on Traffic self-paced?",
-        content:
-          "Yes, Traffic offers self-paced courses, allowing you to learn at your own convenience. You can access the course materials whenever you want and progress through the content at your own speed.",
+        title: "Beginner Driver Courses",
+        content: "We provide beginner drivers with comprehensive courses that establish a strong foundation in driving skills and road safety."
       },
       {
-        title: "Can I interact with instructors on Traffic?",
-        content:
-          "Absolutely! Traffic promotes student-instructor interaction through various means such as discussion forums, messaging systems, and live webinars. You can ask questions, seek clarification, and engage in discussions with instructors and fellow learners.",
+        title: "Advanced Driver Training",
+        content: "Our advanced driver training courses are designed for those looking to enhance their skills with in-depth, practical driving strategies."
       },
       {
-        title: "Can I earn a certificate upon completion of a course?",
-        content:
-          "Yes, Traffic provides certificates of completion for many courses. Once you successfully finish a course, you will receive a certificate that you can showcase on your resume or LinkedIn profile to highlight your newly acquired skills.",
+        title: "Flexible Scheduling for Lessons",
+        content: "We offer flexible scheduling to accommodate your individual needs, ensuring you can take lessons at times that suit you best."
+      },
+      {
+        title: "Certificate of Completion",
+        content: "Upon completion of any of our courses, you'll receive a certificate, which may qualify you for insurance discounts and is a testament to your dedication to safe driving."
       },
     ],
   },
