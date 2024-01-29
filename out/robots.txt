@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://driverseddepot.com
+
+# Sitemaps
+Sitemap: https://driverseddepot.com/sitemap.xml
