@@ -24,7 +24,7 @@ function Footer() {
 
         </div>
         <p className="text-[16px] text-center font-medium font-inter text-black-main">
-          © 2023 Lowbudgettrafficschool.com. All rights reserved. Please see our privacy
+          © 2023 DriversEdDepot.com. All rights reserved. Please see our privacy
           policy for more details.
         </p>
       </div>

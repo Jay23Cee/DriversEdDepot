@@ -13,7 +13,7 @@ function WhyGoToTrafficSchool() {
           Discover the Benefits of Traffic School:
         </p>
         <p className="text-[16px] md:text-left text-center md:text-[18px] font-normal font-inter">
-          Traffic school can be a valuable resource for improving your driving skills, maintaining low insurance rates, and meeting certain court requirements. At LowBudgetTrafficSchool.com, we provide information and resources to help you explore traffic school options in your area. Whether you need to satisfy a court order, reduce insurance premiums, or enhance your driving knowledge, traffic school can help you achieve your goals. 
+          Traffic school can be a valuable resource for improving your driving skills, maintaining low insurance rates, and meeting certain court requirements. AtDriversEdDepot, we provide information and resources to help you explore traffic school options in your area. Whether you need to satisfy a court order, reduce insurance premiums, or enhance your driving knowledge, traffic school can help you achieve your goals. 
         </p>
         {/* ====> attributes */}
         <div className="w-full flex items-start flex-col gap-2 sm:gap-3">
