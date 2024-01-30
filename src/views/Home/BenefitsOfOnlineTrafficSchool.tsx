@@ -32,20 +32,18 @@ function BenefitsOfOnlineTrafficSchool() {
           </div>
           {/*  */}
           <div className="w-full flex flex-col gap-2">
-            <p className="text-black-main text-[28px] leading-8 text-center font-semibold font-inter capitalize">
-              What is an Online Traffic School?
-            </p>
-            <p className="text-[16px] font-inter text-center text-[#6c757d]">
-              Online traffic school is a virtual version of a traditional
-              traffic school, providing courses that teach defensive driving,
-              traffic rules, and driver safety. These courses can be completed
-              from the comfort of your home or anywhere else with internet
-              access. Whether you have received a traffic violation, want to
-              reduce points on your license, or simply wish to refresh your
-              driving knowledge, online traffic school is a flexible and
-              convenient solution.
-            </p>
-          </div>
+  <p className="text-black-main text-[28px] leading-8 text-center font-semibold font-inter capitalize">
+    What is an Online Traffic School?
+  </p>
+  <p className="text-[16px] font-inter text-center text-[#6c757d]">
+    Online traffic school, as offered through Drivers Ed Depot, is a virtual platform 
+    providing comprehensive courses in defensive driving, traffic rules, and driver safety. 
+    These courses, curated by our experts at Drivers Ed Depot, can be completed from the comfort of 
+    your home or any location with internet access. Ideal for those who have received a traffic violation, 
+    are looking to reduce points on their license, or simply wish to refresh their driving knowledge, Drivers Ed Depot's online traffic school offers a flexible and convenient learning experience.
+  </p>
+</div>
+
         </div>
       </div>
     </Wrapper>
