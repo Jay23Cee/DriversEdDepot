@@ -10,7 +10,7 @@ function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       window.location.href = "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f";
-    }, 5000);
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, []);
