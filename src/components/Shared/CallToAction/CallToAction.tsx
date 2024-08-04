@@ -117,205 +117,205 @@ function CallToAction() {
 export const StatesOfUnited = [
   {
     name: "Alabama",
-    affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Alaska",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Arizona",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Arkansas",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "California",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Colorado",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Connecticut",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Delaware",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Florida",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Georgia",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Hawaii",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Idaho",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
 
   {
     name: "Illinois",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Indiana",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Iowa",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Kansas",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Kentucky",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Louisiana",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Maine",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Maryland",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Massachusetts",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Michigan",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Minnesota",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Mississippi",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Missouri",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
 
   {
     name: "Montana",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Nebraska",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Nevada",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "New Hampshire",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "New Jersey",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "New Mexico",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "New York",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "North Carolina",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "North Dakota",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Ohio",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Oklahoma",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Oregon",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Pennsylvania",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Rhode Island",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "South Carolina",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "South Dakota",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Tennessee",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Texas",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Utah",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Vermont",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Virginia",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Washington",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "West Virginia",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Wisconsin",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
   {
     name: "Wyoming",
-     affiliateLink: "http://www.traffic101.com?a_aid=6466716d66623&a_bid=eda15e51&state=alabama",
+     affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
   },
 ];
 
