@@ -8,9 +8,8 @@ export const Data = {
       name: "About",
       path: "/About",
       title: "About DriversEdDepot.com - Your Partner in Driving Education",
-      description: "Learn more about DriversEdDepot.com, your trusted ally in the journey towards safer driving and comprehensive traffic education."
+      description: "Learn more about DriversEdDepot.com, your trusted ally in the journey towards safer driving and comprehensive drivers education."
     }
-
   ],
   Attributes: [
     {
@@ -54,8 +53,8 @@ export const Data = {
   SEO: {
     About: {
       title: "About DriversEdDepot.com - Your Partner in Driving Education",
-      description: "Discover the mission, vision, and values of DriversEdDepot.com. Learn how we connect learners with the best online traffic schools tailored to their needs, promoting safer driving and comprehensive traffic education.",
-      keywords: "drivers education, traffic school, safe driving, online education, driving safety, affiliate marketing for traffic schools, budget-friendly traffic education",
+      description: "Discover the mission, vision, and values of DriversEdDepot.com. Learn how we connect learners with the best online drivers education tailored to their needs, promoting safer driving and comprehensive education.",
+      keywords: "drivers education, online driving school, safe driving, online education, driving safety, affiliate marketing for drivers education, budget-friendly driving courses",
       images: [
         {
           src: "/assets/welcome-to-driverseddepot-header.png",
@@ -67,7 +66,7 @@ export const Data = {
         },
         {
           src: "/assets/what-we-offer-driverseddepot.png",
-          alt: "What We Offer - Online Traffic Schools",
+          alt: "What We Offer - Online Drivers Education",
         },
         {
           src: "/assets/our-commitment-driverseddepot.png",
