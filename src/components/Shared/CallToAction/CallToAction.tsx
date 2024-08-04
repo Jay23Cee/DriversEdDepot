@@ -114,203 +114,203 @@ function CallToAction() {
 export const StatesOfUnited = [
   {
     name: "Alabama",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Alaska",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Arizona",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Arkansas",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "California",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Colorado",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Connecticut",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Delaware",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Florida",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Georgia",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Hawaii",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Idaho",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Illinois",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Indiana",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Iowa",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Kansas",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Kentucky",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Louisiana",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Maine",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Maryland",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Massachusetts",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Michigan",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Minnesota",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Mississippi",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Missouri",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Montana",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Nebraska",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Nevada",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "New Hampshire",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "New Jersey",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "New Mexico",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "New York",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "North Carolina",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "North Dakota",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Ohio",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Oklahoma",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Oregon",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Pennsylvania",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Rhode Island",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "South Carolina",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "South Dakota",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Tennessee",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Texas",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Utah",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Vermont",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Virginia",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Washington",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "West Virginia",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Wisconsin",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
   {
     name: "Wyoming",
-    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172",
+    affiliateLink: "https://www.myimprov.com/?a_aid=66a4143c07172&a_bid=091e1333&a_cid=0882c38f",
   },
 ];
 
