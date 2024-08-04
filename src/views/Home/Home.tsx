@@ -1,9 +1,11 @@
 import React from "react";
 import Hero from "./Hero";
 import Attributes from "./Attributes";
-import WhyGoToTrafficSchool from "./WhyGoToTrafficSchool";
+
+import WhyGoToDriversEd from "./WhyGoToTrafficSchool";
 import BenefitsOfOnlineTrafficSchool from "./BenefitsOfOnlineTrafficSchool";
 import Faqs from "./Faqs";
+import BenefitsOfDrivingSchool from "./BenefitsOfDrivingSchool";
 
 
 function Home() {
@@ -11,8 +13,8 @@ function Home() {
     <React.Fragment>
       <Hero />
       <Attributes/>
-      <WhyGoToTrafficSchool/>
-      <BenefitsOfOnlineTrafficSchool/>
+      <WhyGoToDriversEd/>
+      <BenefitsOfDrivingSchool/>
       <Faqs/>
     </React.Fragment>
   );

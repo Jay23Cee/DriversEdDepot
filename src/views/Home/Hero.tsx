@@ -6,12 +6,10 @@ import { GoLocation } from "react-icons/go";
 import { FiChevronDown } from "react-icons/fi";
 import { StatesOfUnited } from "@/components/Shared/CallToAction/CallToAction";
 
-
 type StateType = {
   name: string;
   affiliateLink: string;
 };
-
 
 function Hero() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,12 +30,12 @@ function Hero() {
 
   return (
     <div id="home" className="w-full h-screen md:h-[calc(100vh-136px)] relative bg-[url('/assets/heroBg.jpeg')] bg-no-repeat bg-cover">
-      {/* ====> overly on image */}
+      {/* ====> overlay on image */}
       <div className="w-full h-full absolute left-0 top-0 bg-black-main/60"></div>
       {/* ====> */}
       <div className="w-full h-full absolute flex flex-col gap-8 justify-center items-center md:px-8 px-4">
         <p className="uppercase text-white-main text-[30px] text-center leading-10 sm:text-[36px] md:text-[40px] lg:text-[50px] font-semibold font-poppins">
-          online traffic school
+          online Drivers Education
         </p>
         {/* ====> some attributes */}
         <div className="flex flex-col gap-2 sm:gap-3">
@@ -118,8 +116,6 @@ function Hero() {
     </div>
   );
 }
-
-
 
 const Attributes = [
   {

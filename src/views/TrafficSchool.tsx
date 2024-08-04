@@ -1,9 +1,8 @@
 import React from "react";
-
 import Image from "next/image";
 import Wrapper from "@/components/Shared/ComponentWrapper/Wrapper";
 
-function TrafficSchool() {
+function DriversEducation() {
   return (
     <Wrapper styles="bg-white-off py-10">
       <div className="w-full grid gap-8 grid-cols-1 lg:grid-cols-[2fr,1.7fr]">
@@ -12,13 +11,13 @@ function TrafficSchool() {
           {/*  */}
           <div className="w-full flex flex-col gap-2">
             <p className="text-black-main text-[28px] leading-8 text-center font-semibold font-inter capitalize">
-              Traffic School: Enhancing Road Safety and Reducing Violations
+              Drivers Education: Enhancing Road Safety and Reducing Violations
             </p>
             <p className="text-[16px] font-inter text-center text-[#6c757d]">
-              Traffic schools offer invaluable courses aimed at improving driving skills, promoting road safety, and helping drivers to dismiss traffic tickets. Enrolling in a traffic school can lead to many benefits, including possible insurance discounts and a better understanding of traffic laws and procedures.
+              Drivers Education courses offer invaluable instruction aimed at improving driving skills, promoting road safety, and helping drivers to dismiss traffic tickets. Enrolling in a Drivers Ed course can lead to many benefits, including possible insurance discounts and a better understanding of traffic laws and procedures.
             </p>
             <p className="text-[16px] font-inter text-center text-[#6c757d]">
-              To discover high-quality, affordable traffic school courses, visit <a href="https://lowbudget-trafficschool.vercel.app/" rel="noopener noreferrer" className="text-brand-secondary">Low Budget Traffic School</a>.
+              To discover high-quality, affordable Drivers Ed courses, visit <a href="https://lowbudget-trafficschool.vercel.app/" rel="noopener noreferrer" className="text-brand-secondary">Low Budget Drivers Education</a>.
             </p>
           </div>
         </div>
@@ -28,7 +27,7 @@ function TrafficSchool() {
             src="/assets/driver1.jpeg"
             fill
             className="object-cover rounded-[20px]"
-            alt="Traffic School"
+            alt="Drivers Education"
           />
         </div>
       </div>
@@ -36,4 +35,4 @@ function TrafficSchool() {
   );
 }
 
-export default TrafficSchool;
+export default DriversEducation;
