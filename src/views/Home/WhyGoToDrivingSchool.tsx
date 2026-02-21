@@ -1,8 +1,25 @@
 import React from "react";
 import Wrapper from "@/components/Shared/ComponentWrapper/Wrapper";
 import { GoCheck } from "react-icons/go";
+import { trackSeoEvent } from "@/lib/analytics";
 
 function WhyGoToDrivingSchool() {
+  const handleEnrollClick = () => {
+    trackSeoEvent("cta_clicked", {
+      placement: "benefits_section",
+      state_name: "all-states",
+      state_slug: "all-states",
+      provider: "none",
+      page_type: "home",
+      section: "why_go_to_driving_school",
+    });
+
+    const heroSection = document.getElementById("home");
+    if (heroSection) {
+      heroSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <Wrapper styles="py-10">
       <div className="w-full flex flex-col gap-4 md:gap-6 justify-center items-center">
@@ -30,10 +47,17 @@ function WhyGoToDrivingSchool() {
           })}
         </div>
         <p className="text-[16px] md:text-left text-center md:text-[18px] font-normal font-inter">
-          Our courses provide a comprehensive learning experience, including interactive lessons, practical exercises, and simulated driving scenarios. Whether you are a new driver, seeking to improve your skills, or require specialized training, GoToDrivingSchool is here to help you become a safe and confident driver. Our courses are accessible on any device, allowing you to learn at your own pace and convenience.
+          Our courses provide a comprehensive learning experience with interactive
+          lessons and practical exercises. Whether you are a new driver or looking to
+          refresh your skills, these programs help you become a safer, more confident
+          driver at your own pace.
         </p>
         {/* ====> enroll now button */}
-        <button className="w-[170px] h-[50px] mt-4 sm:mt-8 font-medium text-[20px] text-white-main bg-brand-primary rounded-[10px] capitalize hover:opacity-80">
+        <button
+          type="button"
+          onClick={handleEnrollClick}
+          className="w-[170px] h-[50px] mt-4 sm:mt-8 font-medium text-[20px] text-white-main bg-brand-primary rounded-[10px] capitalize hover:opacity-80"
+        >
           Enroll Now
         </button>
       </div>

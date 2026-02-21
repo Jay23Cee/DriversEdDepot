@@ -18,16 +18,21 @@ function Header() {
     <Wrapper>
       <div className="w-full h-[70px] md:h-[100px] flex justify-between items-center">
         <div className="w-[180px] sm:w-[240px] h-[120px] relative">
-          <Link href="/">
-            <span onClick={closeDrawer}>
-              <Image src="/assets/logo.png" fill className="object-contain" alt="" />
-            </span>
+          <Link href="/" onClick={closeDrawer} aria-label="Go to homepage">
+            <Image
+              src="/assets/logo.png"
+              fill
+              sizes="240px"
+              quality={80}
+              className="object-contain"
+              alt="DriversEdDepot logo"
+            />
           </Link>
         </div>
         <div className="hidden lg:flex justify-center items-center gap-14 -ml-8">
           {Data.Navibar.map((item, index) => (
-            <Link href={item.path} key={index}>
-              <span onClick={closeDrawer}>{item.name}</span>
+            <Link href={item.path} key={index} onClick={closeDrawer}>
+              {item.name}
             </Link>
           ))}
         </div>
@@ -51,15 +56,18 @@ function Header() {
                   <p className="text-[35px] md:text-[50px] font-poppins font-semibold text-white-main">
                     {/* Logo */}
                   </p>
-                  <RxCross2
+                  <button
+                    type="button"
                     onClick={() => setIsOpen(false)}
-                    className="text-[45px] text-white-main "
-                  />
+                    aria-label="Close menu"
+                  >
+                    <RxCross2 className="text-[45px] text-white-main " />
+                  </button>
                 </div>
                 <div className="flex flex-col justify-center items-center gap-8 mt-16 text-white-main">
                   {Data.Navibar.map((item, index) => (
-                    <Link href={item.path} key={index}>
-                      <span onClick={closeDrawer}>{item.name}</span>
+                    <Link href={item.path} key={index} onClick={closeDrawer}>
+                      {item.name}
                     </Link>
                   ))}
                 </div>

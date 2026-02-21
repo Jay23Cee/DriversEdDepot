@@ -7,6 +7,9 @@ Driver Ed Depot.com is an affiliate website designed to help individuals seeking
 - **Course Recommendations**: Driver Ed Depot.com uses advanced algorithms to analyze user preferences and requirements. Based on this analysis, the website recommends driving courses that best fit the user's needs.
 - **Seamless Redirection**: Upon selecting a recommended course, users are seamlessly redirected to the corresponding driving school's website. This allows users to easily enroll in their preferred course without any hassle.
 - **Wide Selection of Schools**: Driver Ed Depot.com partners with various driving schools, offering a diverse range of online driver's education courses. Users can choose from an extensive selection of reputable institutions.
+- **State-Intent SEO Architecture**: Includes state landing pages, state hubs, requirement matrix, and supporting guides for online drivers ed intent clusters.
+- **Structured Data Support**: JSON-LD support for Organization, WebSite, BreadcrumbList, and Course schema use cases.
+- **Trust and Compliance Pages**: Privacy policy, terms, affiliate disclosure, editorial policy, and contact pages.
 
 ## Tech Stack
 
@@ -28,13 +31,25 @@ git clone https://github.com/your-username/DriverEdDepot.com.git
 npm install
 
 
-4. **Configuration**: Create a `.env.local` file in the project root directory and add the necessary environment variables. You can refer to the `.env.example` file for the required variables.
+4. **Configuration**: Create a `.env.local` file in the project root directory and add the required environment variables:
+
+```
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+```
+
+You can also copy from `.env.example`.
 
 5. **Run the Application**: Execute the following command to start the application:
 npm run dev
 
 
 6. **Access the Website**: Open your web browser and visit `http://localhost:3000` to access Driver Ed Depot.com.
+
+## SEO Ops
+
+- Operational playbook: `docs/seo-operations.md`
+- Baseline template: `docs/search-console-baseline-template.csv`
+- Generate sitemap and robots: `npm run sitemap`
 
 ## Contributing
 
@@ -43,5 +58,3 @@ We welcome contributions to enhance the functionality and usability of Driver Ed
 ## License
 
 Driver Ed Depot.com is released under the [MIT License](LICENSE).
-
-

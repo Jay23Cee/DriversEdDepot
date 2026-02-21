@@ -11,6 +11,8 @@ function BenefitsOfOnlineTrafficSchool() {
           <Image
             src="/assets/driving.jpeg"
             fill
+            sizes="(max-width: 1024px) 100vw, 45vw"
+            quality={68}
             className="object-cover rounded-[20px]"
             alt="Driving Image"
           />

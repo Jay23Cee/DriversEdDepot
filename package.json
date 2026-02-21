@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint --max-warnings=0",
+    "check": "npm run lint && npm run build",
     "sitemap": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {

@@ -4,11 +4,24 @@ export const Data = {
       name: "Home",
       path: "/", // Root path for the homepage
       title: "Top-Rated Online Driving School - Expert Training & Certification"
-    },{
+    },
+    {
       name: "About",
-      path: "/About",
+      path: "/about",
       title: "About DriversEdDepot.com - Your Partner in Driving Education",
       description: "Learn more about DriversEdDepot.com, your trusted ally in the journey towards safer driving and comprehensive drivers education."
+    },
+    {
+      name: "State Hub",
+      path: "/states-online-drivers-ed",
+      title: "Online Drivers Ed by State | DriversEdDepot.com",
+      description: "Explore state pages for online drivers ed requirements and provider options."
+    },
+    {
+      name: "Disclosure",
+      path: "/affiliate-disclosure",
+      title: "Affiliate Disclosure | DriversEdDepot.com",
+      description: "Understand how affiliate relationships work on DriversEdDepot.com."
     }
   ],
   Attributes: [
@@ -59,21 +72,9 @@ export const Data = {
         {
           src: "/assets/welcome-to-driverseddepot-header.png",
           alt: "Welcome to DriversEdDepot.com",
-        },
-        {
-          src: "/assets/our-mission-driverseddepot.png",
-          alt: "Our Mission at DriversEdDepot.com",
-        },
-        {
-          src: "/assets/what-we-offer-driverseddepot.png",
-          alt: "What We Offer - Online Drivers Education",
-        },
-        {
-          src: "/assets/our-commitment-driverseddepot.png",
-          alt: "Our Commitment to Road Safety",
         }
       ],
-      url: "/About"
+      url: "/about"
     }
   }
 };

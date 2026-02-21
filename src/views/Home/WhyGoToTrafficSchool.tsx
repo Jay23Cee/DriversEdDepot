@@ -1,8 +1,25 @@
 import React from "react";
 import Wrapper from "@/components/Shared/ComponentWrapper/Wrapper";
 import { GoCheck } from "react-icons/go";
+import { trackSeoEvent } from "@/lib/analytics";
 
 function WhyGoToDriversEd() {
+  const handleExploreClick = () => {
+    trackSeoEvent("cta_clicked", {
+      placement: "benefits_section",
+      state_name: "all-states",
+      state_slug: "all-states",
+      provider: "none",
+      page_type: "home",
+      section: "why_go_to_drivers_ed",
+    });
+
+    const heroSection = document.getElementById("home");
+    if (heroSection) {
+      heroSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <Wrapper styles="py-10">
       <div className="w-full flex flex-col gap-4 md:gap-6 justify-center items-center">
@@ -32,10 +49,16 @@ function WhyGoToDriversEd() {
           })}
         </div>
         <p className="text-[16px] md:text-left text-center md:text-[18px] font-normal font-inter">
-          By enrolling in Drivers Ed, you can gain valuable knowledge, improve your driving record, and potentially enjoy benefits such as insurance discounts. Take the first step towards a safer and more responsible driving experience by exploring Drivers Ed options today!
+          By enrolling in Drivers Ed, you can gain valuable knowledge, improve your
+          driving record, and potentially qualify for insurance discounts. Take the
+          first step toward safer driving by exploring options today.
         </p>
         {/* ====> enroll now button */}
-        <button className="w-[170px] h-[50px] mt-4 sm:mt-8 font-medium text-[20px] text-white-main bg-brand-primary rounded-[10px] capitalize hover:opacity-80">
+        <button
+          type="button"
+          onClick={handleExploreClick}
+          className="w-[170px] h-[50px] mt-4 sm:mt-8 font-medium text-[20px] text-white-main bg-brand-primary rounded-[10px] capitalize hover:opacity-80"
+        >
           Explore Now
         </button>
       </div>

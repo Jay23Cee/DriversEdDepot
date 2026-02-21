@@ -1,36 +1,67 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
+import SeoHead from "@/components/Seo/SeoHead";
+import StructuredData from "@/components/Seo/StructuredData";
 
-const About: React.FC = () => {
-  // Single image and description for the About section
-  const image = '/assets/welcome-to-driverseddepot-header.png';
-  const title = 'Welcome to DriversEdDepot.com';
-  const description = 'Your trusted ally in the journey towards safer driving and comprehensive traffic education.';
+const BASE_URL = "https://driverseddepot.com";
 
+function AboutPage() {
   return (
-    <div className="flex flex-col items-center px-5 py-8 text-center lg:px-20">
-      {/* Welcome section with image */}
-      <div className="lg:flex lg:justify-center lg:items-center">
-        <div className="lg:w-1/2 lg:mr-10">
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-semibold text-blue-800">{title}</h1>
-          <p className="text-xl lg:text-2xl xl:text-3xl text-gray-700 my-6">{description}</p>
-          <div className="hidden lg:block w-full p-4">
-            <Image src={image} width={640} height={360} layout="responsive" alt="Driving Education" className="rounded-lg shadow-md"/>
-          </div>
-        </div>
+    <div className="w-full max-w-[1100px] m-auto px-4 md:px-8 py-10 md:py-14">
+      <SeoHead
+        title="About DriversEdDepot.com | Trusted Drivers Ed Resource"
+        description="Learn how DriversEdDepot.com helps users compare online drivers education options by state and connect with trusted providers."
+        path="/about"
+      />
+      <StructuredData
+        breadcrumbList={{
+          items: [
+            { name: "Home", item: BASE_URL + "/" },
+            { name: "About", item: BASE_URL + "/about" },
+          ],
+        }}
+      />
 
-        {/* Image for smaller screens */}
-        <div className="lg:hidden w-full mb-6">
-          <Image src={image} width={500} height={281} layout="responsive" alt="Driving Education" className="rounded-lg shadow-md"/>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="space-y-4">
+          <h1 className="text-[30px] md:text-[42px] leading-tight font-semibold font-poppins text-black-main">
+            About DriversEdDepot.com
+          </h1>
+          <p className="text-[17px] md:text-[19px] text-[#4b5563] font-inter">
+            DriversEdDepot.com is a U.S.-focused affiliate marketing site built to help
+            visitors compare online drivers education pathways by state. We prioritize
+            transparent disclosures, state-specific guidance, and direct routing to course
+            providers.
+          </p>
+          <p className="text-[17px] md:text-[19px] text-[#4b5563] font-inter">
+            We do not issue certificates ourselves. If you click a partner link and enroll,
+            we may earn a commission at no additional cost to you.
+          </p>
+        </div>
+        <div className="w-full relative aspect-[16/10] rounded-[16px] overflow-hidden shadow-xl">
+          <Image
+            src="/assets/welcome-to-driverseddepot-header.png"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            quality={72}
+            className="object-cover"
+            alt="DriversEdDepot online drivers education guidance"
+          />
         </div>
       </div>
 
-      {/* Final paragraph */}
-      <div className="max-w-2xl text-lg lg:text-xl xl:text-2xl text-gray-700">
-        <p>Thank you for considering DriversEdDepot.com as your gateway to affordable, high-quality driver education. Drive safely, and let us guide you towards a brighter driving future.</p>
+      <div className="mt-10 bg-white-cool rounded-[16px] p-6 md:p-8">
+        <h2 className="text-[24px] md:text-[30px] font-semibold font-poppins text-black-main">
+          Our Editorial Focus
+        </h2>
+        <ul className="mt-4 space-y-3 text-[16px] md:text-[18px] text-[#374151] font-inter list-disc pl-6">
+          <li>State-intent pages with relevant keywords and user-focused guidance.</li>
+          <li>Requirement snapshots with official source links and refresh dates.</li>
+          <li>Clear affiliate disclosures before outbound provider actions.</li>
+        </ul>
       </div>
     </div>
   );
-};
+}
 
-export default About;
+export default AboutPage;

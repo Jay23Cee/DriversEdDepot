@@ -4,28 +4,66 @@ import Link from "next/link";
 import OutSideClick from "@/hooks/OutSideClick";
 import { GoLocation } from "react-icons/go";
 import { FiChevronDown } from "react-icons/fi";
-import { StatesOfUnited } from "@/components/Shared/CallToAction/CallToAction";
-
-type StateType = {
-  name: string;
-  affiliateLink: string;
-};
+import { STATES_OF_UNITED, StateOption } from "@/data/states";
+import { trackSeoEvent, trackOutboundAndNavigate } from "@/lib/analytics";
 
 function Hero() {
   const [isOpen, setIsOpen] = useState(false);
   const [location, setLocation] = useState("");
-  const [selectedState, setSelectedState] = useState<StateType | null>(null);
+  const [selectedState, setSelectedState] = useState<StateOption | null>(null);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleStateSelect = (state: any) => {
+  const handleStateSelect = (state: StateOption) => {
     setLocation(state.name);
     setSelectedState(state);
     setIsOpen(false);
+    setErrorMessage("");
+    trackSeoEvent("state_selected", {
+      placement: "hero",
+      state_name: state.name,
+      state_slug: state.slug,
+      provider: "none",
+      page_type: "home",
+    });
   };
 
   const handleGetStarted = () => {
-    if (selectedState) {
-      window.location.href = selectedState.affiliateLink;
+    if (!selectedState) {
+      setErrorMessage("Select your state to continue.");
+      return;
     }
+
+    const providerName = selectedState.provider_options[0]?.name ?? "myimprov";
+
+    trackSeoEvent("cta_clicked", {
+      placement: "hero",
+      state_name: selectedState.name,
+      state_slug: selectedState.slug,
+      provider: providerName,
+      page_type: "home",
+    });
+
+    trackOutboundAndNavigate(selectedState.provider_options[0]?.affiliate_url ?? selectedState.affiliateLink, {
+      placement: "hero",
+      state_name: selectedState.name,
+      state_slug: selectedState.slug,
+      provider: providerName,
+      page_type: "home",
+    });
+  };
+
+  const handleSponsoredLinkClick = () => {
+    if (!selectedState) {
+      return;
+    }
+
+    trackSeoEvent("affiliate_outbound_clicked", {
+      placement: "hero_text_link",
+      state_name: selectedState.name,
+      state_slug: selectedState.slug,
+      provider: selectedState.provider_options[0]?.name ?? "myimprov",
+      page_type: "home",
+    });
   };
 
   return (
@@ -60,11 +98,14 @@ function Hero() {
             <div className="w-full flex justify-between items-center">
               <input
                 onClick={() => setIsOpen(true)}
+                onFocus={() => setIsOpen(true)}
                 className="w-full h-[55px] border-[3px] placeholder:text-[18px] placeholder:font-medium text-[18px] font-inter font-medium px-2 rounded-[10px] focus:outline-none border-brand-primary"
                 type="text"
-                id="select-state"
-                defaultValue={location}
+                id="hero-select-state"
+                value={location}
                 placeholder="Select State"
+                readOnly
+                aria-label="Select your state"
               />
               <FiChevronDown className="text-[28px] text-[#afb4be] absolute right-3" />
             </div>
@@ -75,8 +116,8 @@ function Hero() {
                   setIsOpen(false);
                 }}
               >
-                {StatesOfUnited.map((option, index) => (
-                  <div key={index} className="flex flex-col mb-3">
+                {STATES_OF_UNITED.map((option, index) => (
+                  <div key={option.slug} className="flex flex-col mb-3">
                     <div
                       className={`cursor-pointer flex justify-start hover:text-brand-primary items-center gap-2 ${
                         location === option.name
@@ -92,7 +133,7 @@ function Hero() {
                       />
                       {option.name}
                     </div>
-                    {index + 1 < StatesOfUnited.length && (
+                    {index + 1 < STATES_OF_UNITED.length && (
                       <div className="w-[90%] border-b-[2px] border-solid border-brand-primary my-3"></div>
                     )}
                   </div>
@@ -110,6 +151,33 @@ function Hero() {
             </p>
           </button>
         </div>
+        {selectedState ? (
+          <Link
+            href={`/states/${selectedState.slug}`}
+            className="text-white-main underline text-[15px] sm:text-[16px] font-inter"
+          >
+            View {selectedState.name} course details
+          </Link>
+        ) : null}
+        {selectedState ? (
+          <a
+            href={selectedState.provider_options[0]?.affiliate_url ?? selectedState.affiliateLink}
+            rel={selectedState.provider_options[0]?.rel ?? "sponsored noopener noreferrer"}
+            target="_blank"
+            onClick={handleSponsoredLinkClick}
+            className="text-white-main underline text-[15px] sm:text-[16px] font-inter"
+          >
+            Open {selectedState.provider_options[0]?.name ?? "provider"} in a new tab
+          </a>
+        ) : null}
+        <p className="text-white-main/90 text-[13px] sm:text-[14px] text-center font-inter max-w-[560px]">
+          Affiliate disclosure: We may earn a commission when you enroll through partner links.
+        </p>
+        {errorMessage ? (
+          <p className="text-white-main text-[14px] sm:text-[16px] font-inter bg-black-main/40 px-3 py-1 rounded-md">
+            {errorMessage}
+          </p>
+        ) : null}
         {/* ===> */}
         <div className="flex flex-col"></div>
       </div>
