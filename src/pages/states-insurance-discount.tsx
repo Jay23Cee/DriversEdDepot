@@ -12,8 +12,14 @@ function StatesInsuranceDiscountPage() {
     <div className="w-full max-w-[1100px] m-auto px-4 md:px-8 py-10 md:py-14">
       <SeoHead
         title="Insurance Discount Drivers Ed by State | DriversEdDepot"
-        description="Browse state pages focused on insurance-discount use cases for online drivers education."
+        description="Browse state pages focused on drivers ed, defensive driving, and online course use cases for insurance discounts."
         path="/states-insurance-discount"
+        keywords={[
+          "insurance discount drivers ed by state",
+          "defensive driving insurance discount",
+          "online drivers ed insurance discount",
+          "safe driver course by state",
+        ]}
       />
       <StructuredData
         breadcrumbList={{
@@ -24,6 +30,13 @@ function StatesInsuranceDiscountPage() {
               item: BASE_URL + "/states-insurance-discount",
             },
           ],
+        }}
+        itemList={{
+          name: "Insurance discount drivers ed by state",
+          items: STATES_OF_UNITED.map((state) => ({
+            name: `${state.name} insurance discount driving course`,
+            url: BASE_URL + `/states/${state.slug}`,
+          })),
         }}
       />
 
@@ -47,6 +60,10 @@ function StatesInsuranceDiscountPage() {
         . For deeper examples, review the{" "}
         <Link href="/guides" className="text-brand-primary underline">
           topical guides
+        </Link>
+        . If price is the deciding factor, compare details in the{" "}
+        <Link href="/budget-drivers-ed-school" className="text-brand-primary underline">
+          budget drivers ed school guide
         </Link>
         .
       </p>

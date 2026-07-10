@@ -4,6 +4,7 @@ declare global {
     dataLayer?: unknown[];
   }
 }
+import { assertMyImprovAffiliateUrl } from "@/data/myimprovPaths";
 
 type EventParams = Record<string, string | number | boolean | undefined>;
 
@@ -60,6 +61,7 @@ export const trackOutboundAndNavigate = (
     return;
   }
 
+  const safeUrl = url.includes("myimprov.com") ? assertMyImprovAffiliateUrl(url) : url;
   let navigated = false;
 
   const navigate = () => {
@@ -68,7 +70,7 @@ export const trackOutboundAndNavigate = (
     }
 
     navigated = true;
-    window.location.assign(url);
+    window.location.assign(safeUrl);
   };
 
   if (!isAnalyticsEnabled || typeof window.gtag !== "function") {

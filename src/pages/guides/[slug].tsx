@@ -27,11 +27,12 @@ function GuidePage({ guide, state }: InferGetStaticPropsType<typeof getStaticPro
   };
 
   return (
-    <div className="w-full max-w-[1000px] m-auto px-4 md:px-8 py-10 md:py-14">
+    <div className="page-shell max-w-[1000px]">
       <SeoHead
         title={`${guide.title} | DriversEdDepot`}
         description={guide.description}
         path={`/guides/${guide.slug}`}
+        keywords={[guide.primary_keyword, ...guide.secondary_keywords]}
       />
       <StructuredData
         breadcrumbList={{
@@ -41,9 +42,17 @@ function GuidePage({ guide, state }: InferGetStaticPropsType<typeof getStaticPro
             { name: guide.title, item: BASE_URL + `/guides/${guide.slug}` },
           ],
         }}
+        article={{
+          headline: guide.h1,
+          description: guide.description,
+          url: BASE_URL + `/guides/${guide.slug}`,
+          datePublished: guide.last_verified_at,
+          dateModified: guide.last_verified_at,
+          image: BASE_URL + "/assets/welcome-to-driverseddepot-header.png",
+        }}
       />
 
-      <h1 className="text-[30px] md:text-[42px] leading-tight font-semibold font-poppins text-black-main">
+      <nav aria-label="Breadcrumb" className="mb-6 text-[14px] text-brand-muted"><Link href="/">Home</Link> / <Link href="/guides">Guides</Link> / {state.name}</nav><p className="section-kicker">{state.name} guide</p><h1 className="mt-3 text-[34px] md:text-[46px] leading-tight font-semibold font-poppins text-brand-navy">
         {guide.h1}
       </h1>
       <p className="mt-3 text-[16px] md:text-[18px] text-[#374151] font-inter">
@@ -52,9 +61,9 @@ function GuidePage({ guide, state }: InferGetStaticPropsType<typeof getStaticPro
 
       <section className="mt-8 space-y-4 text-[16px] md:text-[18px] text-[#374151] font-inter">
         <p>
-          This guide targets the keyword <strong>{guide.primary_keyword}</strong> and focuses
-          on practical decisions users make before enrolling. Drivers should verify eligibility,
-          timeline, and documentation requirements with official state and court resources.
+          This guide is for drivers comparing {state.name} online drivers ed, traffic school,
+          and defensive-driving options before enrolling. Verify eligibility, timeline, and
+          documentation requirements with official state and court resources.
         </p>
         <p>
           If you are comparing providers for {state.name}, use a structured process: confirm
@@ -67,26 +76,32 @@ function GuidePage({ guide, state }: InferGetStaticPropsType<typeof getStaticPro
           In both paths, successful outcomes are usually tied to documentation quality and timing.
         </p>
         <p>
-          Supporting terms for this page include {guide.secondary_keywords.join(", ")}. We use
-          this cluster to align page intent with user needs while keeping the content focused on
-          reliable, action-oriented guidance rather than generic filler copy.
+          If price is a major factor, compare the final checkout cost, certificate delivery,
+          and approval status together. A budget-friendly option only helps when it matches
+          the requirement you are trying to satisfy.
         </p>
       </section>
 
-      <section className="mt-8 rounded-[14px] border border-[#e5e7eb] p-6 md:p-8">
+      <section className="mt-8 card-surface p-6 md:p-8">
         <h2 className="text-[24px] md:text-[30px] font-semibold font-poppins text-black-main">
           Next Step for {state.name}
         </h2>
         <p className="mt-3 text-[16px] md:text-[18px] text-[#374151] font-inter">
           Continue to the state page to review source citations, eligibility summary, and
-          provider links.
+          provider links. You can also use the budget guide if total cost is your main filter.
         </p>
         <Link href={`/states/${state.slug}`} className="mt-3 inline-block text-brand-primary underline">
           Open {state.name} state page
         </Link>
+        <Link
+          href="/budget-drivers-ed-school"
+          className="ml-0 mt-3 block text-brand-primary underline sm:ml-5 sm:inline-block"
+        >
+          Compare budget drivers ed options
+        </Link>
       </section>
 
-      <section className="mt-8 rounded-[14px] bg-white-cool p-6 md:p-8">
+      <section className="mt-8 rounded-[20px] border border-blue-200 bg-blue-50 p-6 md:p-8">
         <h2 className="text-[24px] md:text-[30px] font-semibold font-poppins text-black-main">
           Provider Shortcut
         </h2>
@@ -98,7 +113,7 @@ function GuidePage({ guide, state }: InferGetStaticPropsType<typeof getStaticPro
           rel={state.provider_options[0]?.rel ?? "sponsored noopener noreferrer"}
           target="_blank"
           onClick={handleProviderClick}
-          className="mt-4 inline-block text-brand-primary underline text-[16px] md:text-[18px]"
+          className="btn-primary mt-5"
         >
           Open {state.provider_options[0]?.name ?? "provider"} for {state.name}
         </a>

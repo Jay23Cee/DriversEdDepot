@@ -14,7 +14,7 @@ function StateHubList({ states }: Props) {
             href={`/states/${state.slug}`}
             className="block rounded-[10px] border border-[#e5e7eb] px-3 py-2 text-[15px] md:text-[16px] text-black-main hover:border-brand-primary hover:text-brand-primary transition-colors"
           >
-            {state.name} drivers ed
+            {state.name} online drivers ed
           </Link>
         </li>
       ))}

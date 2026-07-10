@@ -31,11 +31,41 @@ export type CourseSchemaProps = {
   providerUrl: string;
 };
 
+export type FaqSchemaItem = {
+  question: string;
+  answer: string;
+};
+
+export type FaqPageSchemaProps = {
+  items: FaqSchemaItem[];
+};
+
+export type ArticleSchemaProps = {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished?: string;
+  dateModified?: string;
+  authorName?: string;
+  image?: string;
+};
+
+export type ItemListSchemaProps = {
+  name: string;
+  items: Array<{
+    name: string;
+    url: string;
+  }>;
+};
+
 type StructuredDataProps = {
   organization?: OrganizationSchemaProps;
   website?: WebSiteSchemaProps;
   breadcrumbList?: BreadcrumbListSchemaProps;
   course?: CourseSchemaProps;
+  faqPage?: FaqPageSchemaProps;
+  article?: ArticleSchemaProps;
+  itemList?: ItemListSchemaProps;
 };
 
 function StructuredData({
@@ -43,6 +73,9 @@ function StructuredData({
   website,
   breadcrumbList,
   course,
+  faqPage,
+  article,
+  itemList,
 }: StructuredDataProps) {
   const scripts: Array<Record<string, unknown>> = [];
 
@@ -93,6 +126,63 @@ function StructuredData({
         sameAs: course.providerUrl,
       },
       url: course.url,
+    });
+  }
+
+  if (faqPage && faqPage.items.length > 0) {
+    scripts.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqPage.items.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    });
+  }
+
+  if (article) {
+    scripts.push({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: article.headline,
+      description: article.description,
+      image: article.image,
+      author: {
+        "@type": "Organization",
+        name: article.authorName ?? "DriversEdDepot Editorial Team",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "DriversEdDepot.com",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://driverseddepot.com/assets/logo.png",
+        },
+      },
+      datePublished: article.datePublished,
+      dateModified: article.dateModified,
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": article.url,
+      },
+    });
+  }
+
+  if (itemList && itemList.items.length > 0) {
+    scripts.push({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: itemList.name,
+      itemListElement: itemList.items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        url: item.url,
+      })),
     });
   }
 

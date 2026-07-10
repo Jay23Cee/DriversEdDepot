@@ -2,84 +2,46 @@ import React, { useState } from "react";
 import Wrapper from "../../components/Shared/ComponentWrapper/Wrapper";
 import Link from "next/link";
 import { Data } from "../../../Data/JSON";
-import { RxCross2 } from "react-icons/rx";
 import Image from "next/image";
-import { Spin as Hamburger } from "hamburger-react";
-import Drawer from "react-modern-drawer";
-import "react-modern-drawer/dist/index.css";
+import { FiMenu, FiX } from "react-icons/fi";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-
-  // Function to close the drawer
-  const closeDrawer = () => setIsOpen(false);
+  const closeMenu = () => setIsOpen(false);
 
   return (
-    <Wrapper>
-      <div className="w-full h-[70px] md:h-[100px] flex justify-between items-center">
-        <div className="w-[180px] sm:w-[240px] h-[120px] relative">
-          <Link href="/" onClick={closeDrawer} aria-label="Go to homepage">
-            <Image
-              src="/assets/logo.png"
-              fill
-              sizes="240px"
-              quality={80}
-              className="object-contain"
-              alt="DriversEdDepot logo"
-            />
+    <header className="sticky top-0 z-50 border-b border-brand-line bg-white-main/95 backdrop-blur">
+      <Wrapper>
+        <div className="flex h-[76px] items-center justify-between gap-6">
+          <Link href="/" onClick={closeMenu} aria-label="DriversEdDepot homepage" className="relative block h-[64px] w-[190px] shrink-0">
+            <Image src="/assets/logo.png" fill sizes="190px" className="object-contain object-left" alt="DriversEdDepot" priority />
           </Link>
-        </div>
-        <div className="hidden lg:flex justify-center items-center gap-14 -ml-8">
-          {Data.Navibar.map((item, index) => (
-            <Link href={item.path} key={index} onClick={closeDrawer}>
-              {item.name}
-            </Link>
-          ))}
-        </div>
-        <div className="flex justify-center items-center gap-4">
-          <div className="lg:hidden flex justify-end items-center">
-            <Hamburger
-              color="black"
-              rounded
-              size={34}
-              toggled={isOpen}
-              toggle={setIsOpen}
-            />
-            <Drawer
-              open={isOpen}
-              onClose={() => setIsOpen(false)}
-              direction="right"
-              className="drawer"
-            >
-              <div className="flex flex-col p-6 justify-center items-center ">
-                <div className="w-full flex justify-between items-center">
-                  <p className="text-[35px] md:text-[50px] font-poppins font-semibold text-white-main">
-                    {/* Logo */}
-                  </p>
-                  <button
-                    type="button"
-                    onClick={() => setIsOpen(false)}
-                    aria-label="Close menu"
-                  >
-                    <RxCross2 className="text-[45px] text-white-main " />
-                  </button>
-                </div>
-                <div className="flex flex-col justify-center items-center gap-8 mt-16 text-white-main">
-                  {Data.Navibar.map((item, index) => (
-                    <Link href={item.path} key={index} onClick={closeDrawer}>
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-                <div className="flex justify-center items-center flex-col gap-8 mt-8">
-                  {/* Buttons */}
-                </div>
-              </div>
-            </Drawer>
+          <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary navigation">
+            {Data.Navibar.map((item) => (
+              <Link href={item.path} key={item.path} className="font-inter text-[15px] font-semibold text-brand-ink hover:text-brand-primary">
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+          <div className="hidden lg:block">
+            <Link href="/#find-course" className="btn-primary">Find my course</Link>
           </div>
+          <button type="button" className="grid h-11 w-11 place-items-center rounded-xl border border-brand-line text-brand-navy lg:hidden" aria-label={isOpen ? "Close menu" : "Open menu"} aria-expanded={isOpen} onClick={() => setIsOpen((open) => !open)}>
+            {isOpen ? <FiX size={25} /> : <FiMenu size={25} />}
+          </button>
         </div>
-      </div>
-    </Wrapper>
+        {isOpen ? (
+          <nav className="border-t border-brand-line py-5 lg:hidden" aria-label="Mobile navigation">
+            <div className="flex flex-col gap-1">
+              {Data.Navibar.map((item) => (
+                <Link href={item.path} key={item.path} onClick={closeMenu} className="rounded-lg px-3 py-3 font-semibold text-brand-ink hover:bg-brand-surface hover:text-brand-primary">{item.name}</Link>
+              ))}
+              <Link href="/#find-course" onClick={closeMenu} className="btn-primary mt-3">Find my course</Link>
+            </div>
+          </nav>
+        ) : null}
+      </Wrapper>
+    </header>
   );
 }
 

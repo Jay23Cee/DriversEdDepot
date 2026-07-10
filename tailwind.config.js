@@ -25,13 +25,19 @@ module.exports = {
       },
       colors: {
         brand: {
-          primary: "#fd4c1d",
-          secondary: "#F39F02",
+          navy: "#0B1F3A",
+          primary: "#1677FF",
+          cyan: "#17B6D3",
+          secondary: "#F5B700",
+          ink: "#142033",
+          muted: "#526174",
+          surface: "#F4F7FB",
+          line: "#D9E2EE",
         },
         white: {
           main: "#FFFFFF",
-          off: "#f6ebff",
-          cool: "#faf4ff",
+          off: "#F8FAFD",
+          cool: "#F4F7FB",
         },
         black: {
           main: "#000000",

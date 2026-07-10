@@ -1,4 +1,5 @@
 import React from "react";
+import { DEFAULT_AFFILIATE_LINK } from "@/data/states";
 import Wrapper from "@/components/Shared/ComponentWrapper/Wrapper";
 import Image from "next/image";
 
@@ -20,9 +21,9 @@ function DriverEducationSchool() {
               To explore reputable Driver Education school options and learn more about
               their programs, visit{" "}
               <a
-                href="https://drivers-ed-depot.vercel.app/"
+                href={DEFAULT_AFFILIATE_LINK}
+                rel="sponsored noopener noreferrer"
                 target="_blank"
-                rel="noopener noreferrer"
                 className="text-brand-secondary"
               >
                 Drivers Ed Depot

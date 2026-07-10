@@ -6,7 +6,7 @@ const BASE_URL = "https://driverseddepot.com";
 
 function AffiliateDisclosure() {
   return (
-    <div className="w-full max-w-[1100px] m-auto px-4 md:px-8 py-10 md:py-14 font-inter">
+    <div className="page-shell max-w-[900px] font-inter">
       <SeoHead
         title="Affiliate Disclosure | DriversEdDepot.com"
         description="Read the affiliate disclosure for DriversEdDepot.com."
@@ -21,14 +21,14 @@ function AffiliateDisclosure() {
         }}
       />
 
-      <h1 className="text-[30px] md:text-[40px] font-semibold font-poppins text-black-main">
+      <p className="section-kicker">Transparency</p><h1 className="mt-3 text-[34px] md:text-[46px] font-semibold font-poppins text-brand-navy">
         Affiliate Disclosure
       </h1>
       <p className="mt-4 text-[16px] md:text-[18px] text-[#374151]">
         Effective date: February 21, 2026.
       </p>
 
-      <div className="mt-8 space-y-5 text-[16px] md:text-[18px] text-[#374151]">
+      <div className="card-surface mt-8 space-y-5 p-6 text-[16px] leading-8 text-brand-muted md:p-8 md:text-[18px]">
         <p>
           DriversEdDepot.com participates in affiliate marketing programs. This means we may
           receive compensation when users click certain links and complete qualifying actions

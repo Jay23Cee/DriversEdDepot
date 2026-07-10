@@ -9,26 +9,26 @@ function StateIntentNavigator() {
   const featured = STATES_OF_UNITED.filter((state) => FEATURED_STATES.includes(state.slug));
 
   return (
-    <Wrapper styles="py-10">
-      <div className="w-full rounded-[16px] bg-white-cool p-6 md:p-8">
-        <h2 className="text-[28px] md:text-[34px] text-center font-semibold font-poppins text-black-main">
+    <Wrapper styles="bg-brand-surface py-16 md:py-24">
+      <div className="w-full rounded-[24px] border border-brand-line bg-white-main p-6 shadow-sm md:p-10">
+        <h2 className="text-[30px] md:text-[40px] text-center font-semibold font-poppins text-brand-navy">
           Start With State-Intent Pages
         </h2>
-        <p className="mt-3 text-center text-[16px] md:text-[18px] text-[#374151] font-inter">
+        <p className="mt-3 text-center text-[16px] md:text-[18px] text-brand-muted font-inter">
           Browse the highest-intent entry points, then drill into your state requirements.
         </p>
 
         <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <Link href="/states-online-drivers-ed" className="px-4 py-2 rounded-[10px] border border-[#e5e7eb] hover:border-brand-primary hover:text-brand-primary">
+          <Link href="/states-online-drivers-ed" className="btn-secondary">
             Online Drivers Ed by State
           </Link>
-          <Link href="/states-ticket-dismissal" className="px-4 py-2 rounded-[10px] border border-[#e5e7eb] hover:border-brand-primary hover:text-brand-primary">
+          <Link href="/states-ticket-dismissal" className="btn-secondary">
             Ticket Dismissal Hub
           </Link>
-          <Link href="/states-insurance-discount" className="px-4 py-2 rounded-[10px] border border-[#e5e7eb] hover:border-brand-primary hover:text-brand-primary">
+          <Link href="/states-insurance-discount" className="btn-secondary">
             Insurance Discount Hub
           </Link>
-          <Link href="/state-requirements" className="px-4 py-2 rounded-[10px] border border-[#e5e7eb] hover:border-brand-primary hover:text-brand-primary">
+          <Link href="/state-requirements" className="btn-secondary">
             Requirement Matrix
           </Link>
         </div>
@@ -38,7 +38,7 @@ function StateIntentNavigator() {
             <Link
               key={state.slug}
               href={`/states/${state.slug}`}
-              className="rounded-[10px] border border-[#e5e7eb] px-3 py-2 hover:border-brand-primary hover:text-brand-primary text-[15px] md:text-[16px]"
+              className="rounded-[10px] border border-brand-line bg-brand-surface px-3 py-2 text-[15px] font-medium hover:border-brand-primary hover:text-brand-primary md:text-[16px]"
             >
               {state.name} online drivers ed
             </Link>

@@ -12,8 +12,14 @@ function StatesTicketDismissalPage() {
     <div className="w-full max-w-[1100px] m-auto px-4 md:px-8 py-10 md:py-14">
       <SeoHead
         title="Ticket Dismissal Driving Course by State | DriversEdDepot"
-        description="Find ticket-dismissal oriented online driving course guidance by state with fast links to state pages."
+        description="Find online traffic school and defensive driving guidance for ticket dismissal by state, with fast links to state course pages."
         path="/states-ticket-dismissal"
+        keywords={[
+          "ticket dismissal course by state",
+          "online traffic school by state",
+          "defensive driving ticket dismissal",
+          "budget traffic school",
+        ]}
       />
       <StructuredData
         breadcrumbList={{
@@ -21,6 +27,13 @@ function StatesTicketDismissalPage() {
             { name: "Home", item: BASE_URL + "/" },
             { name: "Ticket Dismissal States", item: BASE_URL + "/states-ticket-dismissal" },
           ],
+        }}
+        itemList={{
+          name: "Ticket dismissal driving course by state",
+          items: STATES_OF_UNITED.map((state) => ({
+            name: `${state.name} ticket dismissal driving course`,
+            url: BASE_URL + `/states/${state.slug}`,
+          })),
         }}
       />
 
@@ -44,6 +57,10 @@ function StatesTicketDismissalPage() {
         and the{" "}
         <Link href="/guides" className="text-brand-primary underline">
           supporting guide hub
+        </Link>
+        . For price-focused comparisons, start with the{" "}
+        <Link href="/budget-drivers-ed-school" className="text-brand-primary underline">
+          budget drivers ed school guide
         </Link>
         .
       </p>

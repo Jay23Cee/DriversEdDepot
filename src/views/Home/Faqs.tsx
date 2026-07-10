@@ -1,46 +1,28 @@
 import React from "react";
 import Wrapper from "@/components/Shared/ComponentWrapper/Wrapper";
-import Faq from "react-faq-component";
+import { HOMEPAGE_FAQS } from "@/data/faqs";
 
-const faqData = {
-  title: "Frequently Asked Questions",
-  rows: [
-    {
-      title: "How does DriversEdDepot.com work?",
-      content:
-        "Select your state, review your options, and we will route you to a course provider that supports your location.",
-    },
-    {
-      title: "Is DriversEdDepot.com a course provider?",
-      content:
-        "No. DriversEdDepot.com is an affiliate website that connects users to third-party drivers education providers.",
-    },
-    {
-      title: "Do I pay more by using this site?",
-      content:
-        "No. Using our site does not add extra cost. We may earn an affiliate commission when a qualifying action is completed.",
-    },
-    {
-      title: "Are these courses available online?",
-      content:
-        "Yes. The providers we feature offer online course options and self-paced access on most devices.",
-    },
-    {
-      title: "Can I use these courses for ticket dismissal or insurance discounts?",
-      content:
-        "Eligibility depends on your state and provider rules. Always verify approval and requirements before enrolling.",
-    },
-  ],
-};
-
-function Faqs() {
+export default function Faqs() {
   return (
-    <Wrapper styles="py-10">
-      <div id="faqs" className="w-full">
-        <Faq data={faqData} />
+    <Wrapper styles="bg-brand-surface py-16 md:py-24">
+      <div id="faqs" className="mx-auto max-w-3xl">
+        <p className="section-kicker text-center">Questions, answered</p>
+        <h2 className="mt-3 text-center font-poppins text-[32px] font-semibold text-brand-navy md:text-[42px]">
+          Know before you enroll
+        </h2>
+        <div className="mt-8 space-y-3">
+          {HOMEPAGE_FAQS.map(({ question, answer }) => (
+            <details key={question} className="card-surface group p-5">
+              <summary className="cursor-pointer list-none pr-8 font-poppins text-[17px] font-semibold text-brand-ink">
+                {question}
+              </summary>
+              <p className="mt-3 border-t border-brand-line pt-3 leading-7 text-brand-muted">
+                {answer}
+              </p>
+            </details>
+          ))}
+        </div>
       </div>
     </Wrapper>
   );
 }
-
-export default Faqs;

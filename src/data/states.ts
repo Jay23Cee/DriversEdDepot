@@ -106,6 +106,7 @@ const getAffiliateUrl = (stateName: string) =>
   buildMyImprovAffiliateUrl(stateName) ?? DEFAULT_AFFILIATE_LINK;
 
 const buildSecondaryKeywords = (stateName: string) => [
+  `${stateName} budget drivers ed school online`,
   `${stateName} defensive driving online`,
   `${stateName} traffic school online`,
   `${stateName} ticket dismissal course`,
@@ -128,6 +129,11 @@ const buildFaqItems = (stateName: string): StateFaqItem[] => [
     question: `Can I use online drivers ed for ticket dismissal in ${stateName}?`,
     answer:
       `Some drivers may qualify for ticket dismissal use cases in ${stateName}, but local court and provider approval rules apply.`,
+  },
+  {
+    question: `How do I compare budget drivers ed school options in ${stateName}?`,
+    answer:
+      `Compare total price, approval status, certificate delivery, deadline rules, device access, and refund terms before choosing a budget drivers ed school option in ${stateName}.`,
   },
 ];
 

@@ -8,11 +8,18 @@ const BASE_URL = "https://driverseddepot.com";
 
 function GuideHubPage() {
   return (
-    <div className="w-full max-w-[1100px] m-auto px-4 md:px-8 py-10 md:py-14">
+    <div className="page-shell">
       <SeoHead
-        title="Drivers Ed State Guides | DriversEdDepot"
-        description="Read state-intent guides on online drivers ed process, ticket dismissal eligibility, and insurance discount use cases."
+        title="Drivers Ed, Traffic School & Defensive Driving Guides | DriversEdDepot"
+        description="Read state-intent guides on online drivers ed, budget course comparison, ticket dismissal eligibility, and insurance discount use cases."
         path="/guides"
+        keywords={[
+          "drivers ed guides",
+          "online drivers ed guide",
+          "traffic school guide",
+          "defensive driving guide",
+          "budget drivers ed",
+        ]}
       />
       <StructuredData
         breadcrumbList={{
@@ -21,19 +28,26 @@ function GuideHubPage() {
             { name: "Guides", item: BASE_URL + "/guides" },
           ],
         }}
+        itemList={{
+          name: "Drivers ed state guides",
+          items: GUIDE_ARTICLES.map((guide) => ({
+            name: guide.title,
+            url: BASE_URL + `/guides/${guide.slug}`,
+          })),
+        }}
       />
 
-      <h1 className="text-[30px] md:text-[44px] leading-tight font-semibold font-poppins text-black-main">
+      <p className="section-kicker">Practical resources</p><h1 className="mt-3 text-[34px] md:text-[48px] leading-tight font-semibold font-poppins text-brand-navy">
         Drivers Ed State Guides
       </h1>
       <p className="mt-3 text-[16px] md:text-[18px] text-[#374151] font-inter">
-        Supporting content designed to strengthen topical authority and help users compare
-        practical next steps before enrollment.
+        Supporting content for online drivers ed, budget course comparison, traffic school,
+        ticket dismissal, and insurance-discount decisions before enrollment.
       </p>
 
       <ul className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
         {GUIDE_ARTICLES.map((guide) => (
-          <li key={guide.slug} className="rounded-[12px] border border-[#e5e7eb] p-4">
+          <li key={guide.slug} className="card-surface p-6">
             <p className="text-[13px] uppercase tracking-wide text-[#6b7280] font-medium">
               {guide.state_name}
             </p>

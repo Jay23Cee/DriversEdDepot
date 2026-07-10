@@ -20,11 +20,17 @@ const formatDate = (dateString: string) => {
 
 function StateRequirementsPage() {
   return (
-    <div className="w-full max-w-[1200px] m-auto px-4 md:px-8 py-10 md:py-14">
+    <div className="page-shell max-w-[1200px]">
       <SeoHead
-        title="State Requirement Matrix | DriversEdDepot"
-        description="View concise online drivers ed requirement snapshots by state, including eligibility summary, keyword map, and source links."
+        title="Online Drivers Ed State Requirements Matrix | DriversEdDepot"
+        description="View online drivers ed, traffic school, ticket dismissal, and budget course requirement snapshots by state with source links."
         path="/state-requirements"
+        keywords={[
+          "online drivers ed state requirements",
+          "traffic school requirements by state",
+          "drivers ed requirement matrix",
+          "budget drivers ed requirements",
+        ]}
       />
       <StructuredData
         breadcrumbList={{
@@ -33,17 +39,25 @@ function StateRequirementsPage() {
             { name: "State Requirement Matrix", item: BASE_URL + "/state-requirements" },
           ],
         }}
+        itemList={{
+          name: "Online drivers ed state requirements",
+          items: STATES_OF_UNITED.map((state) => ({
+            name: `${state.name} online drivers ed requirements`,
+            url: BASE_URL + `/states/${state.slug}`,
+          })),
+        }}
       />
 
-      <h1 className="text-[30px] md:text-[44px] leading-tight font-semibold font-poppins text-black-main">
+      <p className="section-kicker">Compliance reference</p><h1 className="mt-3 text-[34px] md:text-[48px] leading-tight font-semibold font-poppins text-brand-navy">
         State Requirement Matrix
       </h1>
       <p className="mt-3 text-[16px] md:text-[18px] text-[#374151] font-inter">
-        Lightweight state snapshots for online drivers ed planning. Always verify details
-        with official state resources and local court guidance before enrollment.
+        Lightweight state snapshots for online drivers ed, traffic school, ticket dismissal,
+        insurance-discount, and budget course planning. Always verify details with official
+        state resources and local court guidance before enrollment.
       </p>
 
-      <div className="mt-4 rounded-[12px] border border-[#fde68a] bg-[#fffbeb] p-4 text-[15px] md:text-[16px] text-[#78350f] font-inter">
+      <div className="mt-6 rounded-[14px] border border-amber-200 bg-amber-50 p-5 text-[15px] md:text-[16px] text-amber-900 font-inter">
         Refresh policy: this matrix is reviewed monthly. If you spot a mismatch, use our{" "}
         <Link href="/contact" className="underline text-[#92400e]">
           contact page
@@ -51,7 +65,15 @@ function StateRequirementsPage() {
         so we can verify and update quickly.
       </div>
 
-      <div className="mt-8 overflow-x-auto rounded-[12px] border border-[#e5e7eb]">
+      <p className="mt-5 text-[16px] md:text-[18px] text-[#374151] font-inter">
+        Comparing price first? Use the{" "}
+        <Link href="/budget-drivers-ed-school" className="text-brand-primary underline">
+          budget drivers ed school guide
+        </Link>{" "}
+        after checking your state requirement row.
+      </p>
+
+      <div className="mt-8 overflow-x-auto rounded-[16px] border border-brand-line shadow-sm">
         <table className="w-full min-w-[980px] border-collapse">
           <thead className="bg-white-cool">
             <tr>

@@ -1,203 +1,57 @@
 import React, { useState } from "react";
-import { FaCheck } from "react-icons/fa";
 import Link from "next/link";
-import OutSideClick from "@/hooks/OutSideClick";
-import { GoLocation } from "react-icons/go";
-import { FiChevronDown } from "react-icons/fi";
+import Image from "next/image";
+import { FiCheckCircle, FiChevronDown, FiShield } from "react-icons/fi";
 import { STATES_OF_UNITED, StateOption } from "@/data/states";
 import { trackSeoEvent, trackOutboundAndNavigate } from "@/lib/analytics";
 
 function Hero() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [location, setLocation] = useState("");
-  const [selectedState, setSelectedState] = useState<StateOption | null>(null);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [state, setState] = useState<StateOption | null>(null);
+  const [error, setError] = useState("");
 
-  const handleStateSelect = (state: StateOption) => {
-    setLocation(state.name);
-    setSelectedState(state);
-    setIsOpen(false);
-    setErrorMessage("");
-    trackSeoEvent("state_selected", {
-      placement: "hero",
-      state_name: state.name,
-      state_slug: state.slug,
-      provider: "none",
-      page_type: "home",
-    });
+  const selectState = (slug: string) => {
+    const next = STATES_OF_UNITED.find((item) => item.slug === slug) ?? null;
+    setState(next); setError("");
+    if (next) trackSeoEvent("state_selected", { placement: "hero", state_name: next.name, state_slug: next.slug, provider: "none", page_type: "home" });
   };
-
-  const handleGetStarted = () => {
-    if (!selectedState) {
-      setErrorMessage("Select your state to continue.");
-      return;
-    }
-
-    const providerName = selectedState.provider_options[0]?.name ?? "myimprov";
-
-    trackSeoEvent("cta_clicked", {
-      placement: "hero",
-      state_name: selectedState.name,
-      state_slug: selectedState.slug,
-      provider: providerName,
-      page_type: "home",
-    });
-
-    trackOutboundAndNavigate(selectedState.provider_options[0]?.affiliate_url ?? selectedState.affiliateLink, {
-      placement: "hero",
-      state_name: selectedState.name,
-      state_slug: selectedState.slug,
-      provider: providerName,
-      page_type: "home",
-    });
-  };
-
-  const handleSponsoredLinkClick = () => {
-    if (!selectedState) {
-      return;
-    }
-
-    trackSeoEvent("affiliate_outbound_clicked", {
-      placement: "hero_text_link",
-      state_name: selectedState.name,
-      state_slug: selectedState.slug,
-      provider: selectedState.provider_options[0]?.name ?? "myimprov",
-      page_type: "home",
-    });
+  const start = () => {
+    if (!state) { setError("Choose your state before continuing."); return; }
+    const provider = state.provider_options[0];
+    trackSeoEvent("cta_clicked", { placement: "hero", state_name: state.name, state_slug: state.slug, provider: provider.name, page_type: "home" });
+    trackOutboundAndNavigate(provider.affiliate_url, { placement: "hero", state_name: state.name, state_slug: state.slug, provider: provider.name, page_type: "home" });
   };
 
   return (
-    <div id="home" className="w-full h-screen md:h-[calc(100vh-136px)] relative bg-[url('/assets/heroBg.jpeg')] bg-no-repeat bg-cover">
-      {/* ====> overlay on image */}
-      <div className="w-full h-full absolute left-0 top-0 bg-black-main/60"></div>
-      {/* ====> */}
-      <div className="w-full h-full absolute flex flex-col gap-8 justify-center items-center md:px-8 px-4">
-        <p className="uppercase text-white-main text-[30px] text-center leading-10 sm:text-[36px] md:text-[40px] lg:text-[50px] font-semibold font-poppins">
-          online Drivers Education
-        </p>
-        {/* ====> some attributes */}
-        <div className="flex flex-col gap-2 sm:gap-3">
-          {Attributes.map((item, index) => {
-            return (
-              <div
-                key={index}
-                className="flex justify-start items-center gap-3 sm:gap-4"
-              >
-                <FaCheck className="text-brand-primary text-[30px] sm:text-[32px] lg:text-[38px]" />
-                <p className="text-[20px] sm:text-[22px] lg:text-[26px] font-inter capitalize text-white-main font-normal">
-                  {item.name}
-                </p>
-              </div>
-            );
-          })}
+    <section id="find-course" className="relative overflow-hidden bg-brand-navy text-white-main">
+      <Image
+        src="/assets/drivers-ed-hero-v2.png"
+        alt="Learner driver preparing for a lesson with an instructor"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/25" />
+      <div className="relative mx-auto grid max-w-[1280px] gap-12 px-4 py-16 md:px-8 md:py-24 lg:grid-cols-[1.15fr,.85fr] lg:items-center">
+        <div>
+          <p className="section-kicker text-brand-cyan">Your road starts here</p>
+          <h1 className="mt-4 max-w-3xl font-poppins text-[38px] font-semibold leading-[1.08] md:text-[58px]">Find online drivers ed and budget traffic school options by state.</h1>
+          <p className="mt-6 max-w-2xl text-[17px] leading-8 text-white/80 md:text-[20px]">Compare state-focused drivers ed, traffic school, ticket dismissal, and insurance-discount paths before you choose a provider.</p>
+          <ul className="mt-7 grid gap-3 text-[15px] text-white/85 sm:grid-cols-2">
+            {["State-focused guidance", "Budget-conscious course comparison", "Clear affiliate disclosure", "Eligibility reminders before enrollment"].map((item) => <li key={item} className="flex items-center gap-3"><FiCheckCircle className="shrink-0 text-brand-cyan" size={20}/>{item}</li>)}
+          </ul>
         </div>
-        {/* ====> select location + get started button */}
-        <div className="w-full flex md:flex-row flex-col justify-center items-center gap-4">
-          {/* ===> select location */}
-          <div className="w-full max-w-[240px] flex flex-col justify-center items-center relative">
-            <div className="w-full flex justify-between items-center">
-              <input
-                onClick={() => setIsOpen(true)}
-                onFocus={() => setIsOpen(true)}
-                className="w-full h-[55px] border-[3px] placeholder:text-[18px] placeholder:font-medium text-[18px] font-inter font-medium px-2 rounded-[10px] focus:outline-none border-brand-primary"
-                type="text"
-                id="hero-select-state"
-                value={location}
-                placeholder="Select State"
-                readOnly
-                aria-label="Select your state"
-              />
-              <FiChevronDown className="text-[28px] text-[#afb4be] absolute right-3" />
-            </div>
-            {isOpen && (
-              <OutSideClick
-                style="w-full max-h-[500px] srollBar overflow-auto bg-white-main border-[2px] border-solid border-brand-main rounded-[8px] p-3 absolute -top-[240px] z-30"
-                Event={() => {
-                  setIsOpen(false);
-                }}
-              >
-                {STATES_OF_UNITED.map((option, index) => (
-                  <div key={option.slug} className="flex flex-col mb-3">
-                    <div
-                      className={`cursor-pointer flex justify-start hover:text-brand-primary items-center gap-2 ${
-                        location === option.name
-                          ? "text-brand-primary"
-                          : "text-black-main"
-                      } font-sans text-[16px] font-normal`}
-                      onClick={() => handleStateSelect(option)}
-                    >
-                      <GoLocation
-                        className={`text-[22px] ${
-                          location === option.name && "fill-brand-primary"
-                        }`}
-                      />
-                      {option.name}
-                    </div>
-                    {index + 1 < STATES_OF_UNITED.length && (
-                      <div className="w-[90%] border-b-[2px] border-solid border-brand-primary my-3"></div>
-                    )}
-                  </div>
-                ))}
-              </OutSideClick>
-            )}
-          </div>
-          {/* ===> get started button */}
-          <button
-            className="w-full max-w-[240px] h-[55px] rounded-[10px] hover:opacity-70 bg-brand-primary"
-            onClick={handleGetStarted}
-          >
-            <p className="text-[26px] font-inter capitalize text-white-main">
-              get started
-            </p>
-          </button>
+        <div className="rounded-[24px] border border-white/15 bg-white-main p-6 text-brand-ink shadow-2xl md:p-8">
+          <div className="flex items-center gap-3"><span className="grid h-11 w-11 place-items-center rounded-xl bg-blue-50 text-brand-primary"><FiShield size={22}/></span><div><p className="font-poppins text-[20px] font-semibold">Start with your state</p><p className="text-[14px] text-brand-muted">We match the route to your location.</p></div></div>
+          <label htmlFor="hero-state" className="mt-6 block text-[14px] font-semibold">State</label>
+          <div className="relative mt-2"><select id="hero-state" value={state?.slug ?? ""} onChange={(e) => selectState(e.target.value)} className="h-14 w-full appearance-none rounded-xl border border-brand-line bg-white-main px-4 pr-11 text-[16px] font-medium focus:border-brand-primary focus:outline-none" aria-describedby={error ? "hero-error" : undefined}><option value="">Select your state</option>{STATES_OF_UNITED.map((item) => <option key={item.slug} value={item.slug}>{item.name}</option>)}</select><FiChevronDown className="pointer-events-none absolute right-4 top-[18px] text-brand-muted" size={20}/></div>
+          {error ? <p id="hero-error" role="alert" className="mt-2 text-[14px] font-medium text-red-700">{error}</p> : null}
+          <button type="button" onClick={start} className="btn-primary mt-4 w-full">View provider option</button>
+          {state ? <Link href={`/states/${state.slug}`} className="mt-4 block text-center text-[14px] font-semibold text-brand-primary hover:underline">Review {state.name} details first</Link> : null}
+          <p className="mt-5 border-t border-brand-line pt-4 text-[12px] leading-5 text-brand-muted">Sponsored-link disclosure: We may earn a commission if you enroll through a partner link, at no added cost to you.</p>
         </div>
-        {selectedState ? (
-          <Link
-            href={`/states/${selectedState.slug}`}
-            className="text-white-main underline text-[15px] sm:text-[16px] font-inter"
-          >
-            View {selectedState.name} course details
-          </Link>
-        ) : null}
-        {selectedState ? (
-          <a
-            href={selectedState.provider_options[0]?.affiliate_url ?? selectedState.affiliateLink}
-            rel={selectedState.provider_options[0]?.rel ?? "sponsored noopener noreferrer"}
-            target="_blank"
-            onClick={handleSponsoredLinkClick}
-            className="text-white-main underline text-[15px] sm:text-[16px] font-inter"
-          >
-            Open {selectedState.provider_options[0]?.name ?? "provider"} in a new tab
-          </a>
-        ) : null}
-        <p className="text-white-main/90 text-[13px] sm:text-[14px] text-center font-inter max-w-[560px]">
-          Affiliate disclosure: We may earn a commission when you enroll through partner links.
-        </p>
-        {errorMessage ? (
-          <p className="text-white-main text-[14px] sm:text-[16px] font-inter bg-black-main/40 px-3 py-1 rounded-md">
-            {errorMessage}
-          </p>
-        ) : null}
-        {/* ===> */}
-        <div className="flex flex-col"></div>
       </div>
-    </div>
+    </section>
   );
 }
-
-const Attributes = [
-  {
-    name: "for traffic tickets",
-  },
-  {
-    name: "auto insurance discounts",
-  },
-  {
-    name: "100% online",
-  },
-  {
-    name: "state licensed courses",
-  },
-];
-
 export default Hero;

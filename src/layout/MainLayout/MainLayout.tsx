@@ -13,7 +13,7 @@ function MainLayout({ children }: Props) {
     <React.Fragment>
       <PromoBar/>
       <Header />
-      {children}
+      <main>{children}</main>
       <Footer />
       <CallToAction/>
     </React.Fragment>

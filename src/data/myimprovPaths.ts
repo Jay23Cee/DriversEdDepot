@@ -1,6 +1,6 @@
-const MYIMPROV_BASE_URL = "https://www.myimprov.com";
+export const MYIMPROV_BASE_URL = "https://www.myimprov.com";
 
-const MYIMPROV_AFFILIATE_QUERY = {
+export const MYIMPROV_AFFILIATE_QUERY = {
   a_aid: "66a4143c07172",
   a_bid: "091e1333",
   a_cid: "0882c38f",
@@ -10,6 +10,19 @@ const appendAffiliateQuery = (url: URL) => {
   Object.entries(MYIMPROV_AFFILIATE_QUERY).forEach(([key, value]) => {
     url.searchParams.set(key, value);
   });
+};
+
+export const hasValidMyImprovAffiliateTracking = (value: string) => {
+  try {
+    const url = new URL(value);
+    if (url.hostname !== "www.myimprov.com" && url.hostname !== "myimprov.com") return false;
+    return Object.entries(MYIMPROV_AFFILIATE_QUERY).every(([key, expected]) => url.searchParams.get(key) === expected);
+  } catch { return false; }
+};
+
+export const assertMyImprovAffiliateUrl = (value: string) => {
+  if (!hasValidMyImprovAffiliateTracking(value)) throw new Error("MyImprov affiliate URL is missing required tracking identifiers.");
+  return value;
 };
 
 const toAbsolutePath = (path: string) => (path.startsWith("/") ? path : `/${path}`);
@@ -75,11 +88,11 @@ export const buildMyImprovAffiliateUrl = (stateName: string) => {
 
   const url = new URL(toAbsolutePath(statePath), MYIMPROV_BASE_URL);
   appendAffiliateQuery(url);
-  return url.toString();
+  return assertMyImprovAffiliateUrl(url.toString());
 };
 
 export const buildDefaultMyImprovAffiliateUrl = () => {
   const url = new URL("/", MYIMPROV_BASE_URL);
   appendAffiliateQuery(url);
-  return url.toString();
+  return assertMyImprovAffiliateUrl(url.toString());
 };

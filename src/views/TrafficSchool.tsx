@@ -1,4 +1,5 @@
 import React from "react";
+import { DEFAULT_AFFILIATE_LINK } from "@/data/states";
 import Image from "next/image";
 import Wrapper from "@/components/Shared/ComponentWrapper/Wrapper";
 
@@ -19,9 +20,9 @@ function DriversEducation() {
             <p className="text-[16px] font-inter text-center text-[#6c757d]">
               To discover high-quality, affordable Drivers Ed courses, visit{" "}
               <a
-                href="https://lowbudget-trafficschool.vercel.app/"
+                href={DEFAULT_AFFILIATE_LINK}
+                rel="sponsored noopener noreferrer"
                 target="_blank"
-                rel="noopener noreferrer"
                 className="text-brand-secondary"
               >
                 Low Budget Drivers Education

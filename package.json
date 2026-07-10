@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint --max-warnings=0",
     "check": "npm run lint && npm run build",
+    "verify:affiliates": "node scripts/verify-affiliate-links.js",
     "sitemap": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {

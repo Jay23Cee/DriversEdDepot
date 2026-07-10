@@ -7,7 +7,7 @@ const BASE_URL = "https://driverseddepot.com";
 
 function AboutPage() {
   return (
-    <div className="w-full max-w-[1100px] m-auto px-4 md:px-8 py-10 md:py-14">
+    <div className="page-shell">
       <SeoHead
         title="About DriversEdDepot.com | Trusted Drivers Ed Resource"
         description="Learn how DriversEdDepot.com helps users compare online drivers education options by state and connect with trusted providers."
@@ -24,7 +24,7 @@ function AboutPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div className="space-y-4">
-          <h1 className="text-[30px] md:text-[42px] leading-tight font-semibold font-poppins text-black-main">
+          <p className="section-kicker">Independent course guidance</p><h1 className="mt-3 text-[34px] md:text-[46px] leading-tight font-semibold font-poppins text-brand-navy">
             About DriversEdDepot.com
           </h1>
           <p className="text-[17px] md:text-[19px] text-[#4b5563] font-inter">
@@ -50,7 +50,7 @@ function AboutPage() {
         </div>
       </div>
 
-      <div className="mt-10 bg-white-cool rounded-[16px] p-6 md:p-8">
+      <div className="mt-10 card-surface p-6 md:p-8">
         <h2 className="text-[24px] md:text-[30px] font-semibold font-poppins text-black-main">
           Our Editorial Focus
         </h2>

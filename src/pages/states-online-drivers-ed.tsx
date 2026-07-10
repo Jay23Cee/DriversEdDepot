@@ -11,9 +11,15 @@ function StatesOnlineDriversEdPage() {
   return (
     <div className="w-full max-w-[1100px] m-auto px-4 md:px-8 py-10 md:py-14">
       <SeoHead
-        title="Online Drivers Ed by State | DriversEdDepot"
-        description="Browse all U.S. state pages for online drivers ed requirements, keyword-focused guidance, and provider links."
+        title="Online Drivers Ed by State | Budget Traffic School Hub"
+        description="Browse online drivers ed, budget traffic school, defensive driving, and provider guidance for every U.S. state."
         path="/states-online-drivers-ed"
+        keywords={[
+          "online drivers ed by state",
+          "budget traffic school by state",
+          "state drivers ed requirements",
+          "online defensive driving by state",
+        ]}
       />
       <StructuredData
         breadcrumbList={{
@@ -22,14 +28,21 @@ function StatesOnlineDriversEdPage() {
             { name: "States Online Drivers Ed", item: BASE_URL + "/states-online-drivers-ed" },
           ],
         }}
+        itemList={{
+          name: "Online drivers ed by state",
+          items: STATES_OF_UNITED.map((state) => ({
+            name: `${state.name} online drivers ed`,
+            url: BASE_URL + `/states/${state.slug}`,
+          })),
+        }}
       />
 
       <h1 className="text-[30px] md:text-[44px] leading-tight font-semibold font-poppins text-black-main">
-        Online Drivers Ed by State
+        Online Drivers Ed and Traffic School by State
       </h1>
       <p className="mt-3 text-[16px] md:text-[18px] text-[#374151] font-inter">
-        Use this hub to jump directly to state-intent pages optimized for online drivers
-        education searches and conversion-focused provider routing.
+        Use this hub to jump directly to state pages for online drivers ed, budget traffic
+        school, defensive driving, ticket dismissal, and insurance-discount research.
       </p>
 
       <div className="mt-8">
@@ -44,6 +57,11 @@ function StatesOnlineDriversEdPage() {
           <li>
             <Link href="/states-ticket-dismissal" className="text-brand-primary underline">
               Ticket Dismissal State Hub
+            </Link>
+          </li>
+          <li>
+            <Link href="/budget-drivers-ed-school" className="text-brand-primary underline">
+              Budget Drivers Ed School Guide
             </Link>
           </li>
           <li>

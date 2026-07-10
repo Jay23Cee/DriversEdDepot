@@ -2,9 +2,9 @@ import React from "react";
 
 function PromoBar() {
   return (
-    <div className="bg-brand-primary w-full h-[36px] flex justify-center items-center">
-      <p className="text-[14px] sm:text-[16px] text-white-main font-inter capitalize font-semibold">
-        lower prices for a limited time
+    <div className="bg-brand-navy w-full min-h-[36px] px-4 flex justify-center items-center border-b border-white/10">
+      <p className="text-[13px] sm:text-[14px] text-white-main font-inter text-center font-medium">
+        Compare online driver education options by state - always verify eligibility before enrolling.
       </p>
     </div>
   );

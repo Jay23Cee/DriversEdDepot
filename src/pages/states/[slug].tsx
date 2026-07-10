@@ -47,11 +47,12 @@ function StatePage({ state }: InferGetStaticPropsType<typeof getStaticProps>) {
   };
 
   return (
-    <div className="w-full max-w-[1100px] m-auto px-4 md:px-8 py-10 md:py-14">
+    <div className="page-shell">
       <SeoHead
-        title={`${state.name} Online Drivers Ed | DriversEdDepot`}
-        description={`Find online drivers ed options in ${state.name}. Review eligibility, ticket-dismissal use cases, insurance discount notes, and provider links.`}
+        title={`${state.name} Online Drivers Ed & Traffic School | DriversEdDepot`}
+        description={`Compare ${state.name} online drivers ed, budget drivers ed school options, traffic school, ticket dismissal, insurance discount notes, and provider links.`}
         path={`/states/${state.slug}`}
+        keywords={[state.primary_keyword, ...state.secondary_keywords]}
       />
       <StructuredData
         breadcrumbList={{
@@ -61,26 +62,34 @@ function StatePage({ state }: InferGetStaticPropsType<typeof getStaticProps>) {
             { name: state.name, item: BASE_URL + `/states/${state.slug}` },
           ],
         }}
-        course={{
-          name: `${state.name} Online Drivers Ed Selection Guide`,
-          description: `State-intent course selection guide for ${state.name} including eligibility, completion flow, and provider options.`,
+        article={{
+          headline: `${state.name} Online Drivers Ed and Traffic School Guide`,
+          description: `State-intent guide for ${state.name} online drivers ed, traffic school, ticket dismissal, insurance discount, and budget course comparison.`,
           url: BASE_URL + `/states/${state.slug}`,
-          providerName: "DriversEdDepot.com",
-          providerUrl: BASE_URL,
+          datePublished: state.last_verified_at,
+          dateModified: state.last_verified_at,
+          image: BASE_URL + "/assets/drivers-ed-hero-v2.png",
+        }}
+        faqPage={{
+          items: state.faq_items,
         }}
       />
 
-      <h1 className="text-[30px] md:text-[44px] leading-tight font-semibold font-poppins text-black-main">
-        {state.name} Online Drivers Ed Courses
+      <nav aria-label="Breadcrumb" className="mb-6 text-[14px] font-medium text-brand-muted"><Link href="/">Home</Link> / <Link href="/states-online-drivers-ed">States</Link> / {state.name}</nav>
+      <p className="section-kicker">State course guide</p>
+      <h1 className="mt-3 text-[34px] md:text-[48px] leading-tight font-semibold font-poppins text-brand-navy">
+        {state.name} Online Drivers Ed and Traffic School Guide
       </h1>
       <p className="mt-3 text-[16px] md:text-[18px] text-[#374151] font-inter">
-        Primary keyword target: <strong>{state.primary_keyword}</strong>
+        Compare {state.name} online drivers ed, defensive driving, traffic school,
+        ticket dismissal, and insurance-discount paths before you choose a provider.
       </p>
-      <p className="mt-1 text-[15px] md:text-[16px] text-[#4b5563] font-inter">
-        Supporting terms: {state.secondary_keywords.join(" • ")}
+      <p className="mt-2 text-[15px] md:text-[16px] text-[#4b5563] font-inter">
+        If you are searching for a budget drivers ed school option in {state.name}, use
+        this page as a checklist for approval, timing, certificate delivery, and total price.
       </p>
 
-      <section className="mt-8 bg-white-cool rounded-[16px] p-6 md:p-8 space-y-4">
+      <section className="mt-8 rounded-[20px] border border-brand-line bg-brand-surface p-6 md:p-8 space-y-4">
         <h2 className="text-[24px] md:text-[30px] font-semibold font-poppins text-black-main">
           Eligibility and Enrollment Snapshot
         </h2>
@@ -103,8 +112,27 @@ function StatePage({ state }: InferGetStaticPropsType<typeof getStaticProps>) {
         </p>
       </section>
 
+      <section className="mt-8 card-surface p-6 md:p-8">
+        <h2 className="text-[24px] md:text-[30px] font-semibold font-poppins text-black-main">
+          Budget-Friendly Drivers Ed in {state.name}
+        </h2>
+        <p className="mt-3 text-[16px] md:text-[18px] text-[#374151] font-inter">
+          A low advertised price is only useful if the course is accepted for your goal. When
+          comparing {state.name} budget drivers ed school options, check the final checkout
+          price, certificate fees, delivery timing, mobile access, approval status, and refund
+          rules before enrolling.
+        </p>
+        <p className="mt-3 text-[16px] md:text-[18px] text-[#374151] font-inter">
+          For a broader price-focused checklist, review the{" "}
+          <Link href="/budget-drivers-ed-school" className="text-brand-primary underline">
+            budget drivers ed school guide
+          </Link>
+          .
+        </p>
+      </section>
+
       <section className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-5">
-        <div className="rounded-[14px] border border-[#e5e7eb] p-5">
+        <div className="card-surface p-6">
           <h3 className="text-[22px] font-semibold font-poppins text-black-main">
             Completion Path
           </h3>
@@ -115,7 +143,7 @@ function StatePage({ state }: InferGetStaticPropsType<typeof getStaticProps>) {
             <li>Submit completion proof to the required destination.</li>
           </ol>
         </div>
-        <div className="rounded-[14px] border border-[#e5e7eb] p-5">
+        <div className="card-surface p-6">
           <h3 className="text-[22px] font-semibold font-poppins text-black-main">
             State Caveats
           </h3>
@@ -128,7 +156,7 @@ function StatePage({ state }: InferGetStaticPropsType<typeof getStaticProps>) {
         </div>
       </section>
 
-      <section className="mt-8 rounded-[16px] bg-brand-primary/10 p-6 md:p-8">
+      <section className="mt-8 rounded-[20px] border border-blue-200 bg-blue-50 p-6 md:p-8">
         <h2 className="text-[24px] md:text-[30px] font-semibold font-poppins text-black-main">
           Course Provider Options
         </h2>
@@ -143,7 +171,7 @@ function StatePage({ state }: InferGetStaticPropsType<typeof getStaticProps>) {
               rel={provider.rel}
               target="_blank"
               onClick={() => handleAffiliateClick(provider.name)}
-              className="rounded-[12px] border border-[#fed7aa] bg-white-main p-4 hover:border-brand-primary transition-colors"
+              className="rounded-[14px] border border-brand-line bg-white-main p-5 shadow-sm hover:border-brand-primary"
             >
               <p className="text-[18px] font-semibold font-poppins text-black-main">
                 {provider.name}
@@ -156,7 +184,7 @@ function StatePage({ state }: InferGetStaticPropsType<typeof getStaticProps>) {
         </div>
       </section>
 
-      <section className="mt-8 rounded-[16px] border border-[#e5e7eb] p-6 md:p-8">
+      <section className="mt-8 card-surface p-6 md:p-8">
         <h2 className="text-[24px] md:text-[30px] font-semibold font-poppins text-black-main">
           State Source and Verification
         </h2>
@@ -184,7 +212,7 @@ function StatePage({ state }: InferGetStaticPropsType<typeof getStaticProps>) {
         </p>
       </section>
 
-      <section className="mt-8 rounded-[16px] border border-[#e5e7eb] p-6 md:p-8">
+      <section className="mt-8 card-surface p-6 md:p-8">
         <h2 className="text-[24px] md:text-[30px] font-semibold font-poppins text-black-main">
           Frequently Asked Questions
         </h2>

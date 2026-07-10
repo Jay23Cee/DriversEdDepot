@@ -17,3 +17,5 @@
 - Confirm each edited state path resolves on MyImprov.
 - Confirm generated URL still includes `a_aid`, `a_bid`, and `a_cid`.
 - Confirm hero CTA, sticky CTA, state page cards, and guide page links route to the expected deep link.
+- Run `npm run verify:affiliates` to validate all configured state paths and the fallback URL.
+- Passing validation confirms the required identifiers are present. Confirm that the identifiers belong to the intended payable account inside the MyImprov affiliate dashboard.
