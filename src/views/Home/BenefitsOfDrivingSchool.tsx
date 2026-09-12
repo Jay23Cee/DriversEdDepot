@@ -9,7 +9,7 @@ function BenefitsOfDrivingSchool() {
         {/* ==> left portion */}
         <div className="w-full h-[260px] xl:h-[320px] shadow-2xl relative rounded-[20px]">
           <Image
-            src="/assets/driving.jpeg"
+            src="/assets/student-car-2026.png"
             fill
             sizes="(max-width: 1024px) 100vw, 45vw"
             quality={68}

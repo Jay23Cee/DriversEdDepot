@@ -131,7 +131,7 @@ export default function Home() {
 
           <div className="relative min-h-[390px] overflow-hidden rounded-[24px] shadow-2xl md:min-h-[500px]">
             <Image
-              src="/assets/right-starting-point-v2.png"
+              src="/assets/state-comparison-2026.png"
               alt="Student comparing online driver education options at home"
               fill
               sizes="(max-width: 1024px) 100vw, 55vw"

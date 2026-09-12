@@ -24,8 +24,8 @@ function Hero() {
   return (
     <section id="find-course" className="relative overflow-hidden bg-brand-navy text-white-main">
       <Image
-        src="/assets/drivers-ed-hero-v2.png"
-        alt="Learner driver preparing for a lesson with an instructor"
+        src="/assets/drivers-ed-hero-2026.png"
+        alt="Teen learner receiving guidance from a driving instructor on a coastal road"
         fill
         priority
         sizes="100vw"

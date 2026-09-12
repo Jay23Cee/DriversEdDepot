@@ -34,7 +34,7 @@ function DriversEducation() {
         {/* ==> right portion */}
         <div className="w-full h-[260px] xl:h-[320px] shadow-2xl relative rounded-[20px]">
           <Image
-            src="/assets/driver1.jpeg"
+            src="/assets/online-learning-2026.png"
             fill
             className="object-cover rounded-[20px]"
             alt="Drivers Education"
