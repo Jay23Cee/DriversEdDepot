@@ -12,13 +12,13 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-line bg-white-main/95 backdrop-blur">
       <Wrapper>
-        <div className="flex h-[76px] items-center justify-between gap-6">
+        <div className="flex h-[68px] items-center justify-between gap-4 sm:h-[76px] sm:gap-6">
           <Link href="/" onClick={closeMenu} aria-label="Driver's Ed Depot homepage" className="shrink-0">
-            <span className="relative block h-14 w-44 sm:h-16 sm:w-52">
+            <span className="relative block h-12 w-40 sm:h-16 sm:w-52">
               <Image
                 src="/assets/drivers-ed-depot-header-logo.png"
                 fill
-                sizes="(min-width: 480px) 208px, 176px"
+                sizes="(min-width: 480px) 208px, 160px"
                 className="object-contain object-left"
                 alt="Driver's Ed Depot"
                 priority

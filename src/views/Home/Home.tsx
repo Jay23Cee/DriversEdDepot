@@ -44,21 +44,21 @@ export default function Home() {
     <>
       <Hero />
 
-      <Wrapper styles="py-16 md:py-24">
+      <Wrapper styles="py-12 md:py-24">
         <div className="text-center">
           <p className="section-kicker">Designed to reduce guesswork</p>
-          <h2 className="mx-auto mt-3 max-w-3xl font-poppins text-[32px] font-semibold text-brand-navy md:text-[44px]">
+          <h2 className="mx-auto mt-3 max-w-3xl font-poppins text-[28px] font-semibold leading-tight text-brand-navy md:text-[44px]">
             A clearer path from research to enrollment
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-[17px] leading-8 text-brand-muted">
+          <p className="mx-auto mt-4 max-w-2xl text-[16px] leading-7 text-brand-muted md:text-[17px] md:leading-8">
             Useful guidance, visible trust cues, and a direct next step without implying
             that every course fits every requirement.
           </p>
         </div>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-4 md:mt-10 md:grid-cols-2 md:gap-5 lg:grid-cols-4">
           {benefits.map(({ icon: Icon, title, body }) => (
-            <article className="card-surface p-6" key={title}>
+            <article className="card-surface p-5 md:p-6" key={title}>
               <span className="grid h-12 w-12 place-items-center rounded-xl bg-blue-50 text-brand-primary">
                 <Icon size={23} />
               </span>
@@ -71,20 +71,20 @@ export default function Home() {
         </div>
       </Wrapper>
 
-      <Wrapper styles="bg-brand-surface py-16 md:py-24">
+      <Wrapper styles="bg-brand-surface py-12 md:py-24">
         <div className="text-center">
           <p className="section-kicker">Three simple steps</p>
-          <h2 className="mt-3 font-poppins text-[32px] font-semibold text-brand-navy md:text-[42px]">
+          <h2 className="mt-3 font-poppins text-[28px] font-semibold leading-tight text-brand-navy md:text-[42px]">
             From state selection to course provider
           </h2>
         </div>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="mt-8 grid gap-4 md:mt-10 md:grid-cols-3 md:gap-5">
           {[
             ["01", "Choose your state", "Start with the rules and options most relevant to your location."],
             ["02", "Review the details", "Check the intended use, eligibility notes, and official source links."],
             ["03", "Continue securely", "Open the sponsored provider link with required tracking preserved."],
           ].map(([number, title, body]) => (
-            <article key={number} className="card-surface p-7">
+            <article key={number} className="card-surface p-5 md:p-7">
               <span className="font-poppins text-[14px] font-bold text-brand-primary">
                 STEP {number}
               </span>
@@ -95,14 +95,14 @@ export default function Home() {
         </div>
       </Wrapper>
 
-      <Wrapper styles="py-16 md:py-24">
+      <Wrapper styles="py-12 md:py-24">
         <div className="grid gap-10 lg:grid-cols-[.9fr,1.1fr] lg:items-center">
           <div>
             <p className="section-kicker">Built around your goal</p>
-            <h2 className="mt-3 font-poppins text-[32px] font-semibold text-brand-navy md:text-[42px]">
+            <h2 className="mt-3 font-poppins text-[28px] font-semibold leading-tight text-brand-navy md:text-[42px]">
               Find the right starting point
             </h2>
-            <p className="mt-4 text-[17px] leading-8 text-brand-muted">
+            <p className="mt-4 text-[16px] leading-7 text-brand-muted md:text-[17px] md:leading-8">
               Start with the reason you need a course, then confirm the requirements that
               apply in your state or court before paying.
             </p>
@@ -129,7 +129,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative min-h-[390px] overflow-hidden rounded-[24px] shadow-2xl md:min-h-[500px]">
+          <div className="relative min-h-[320px] overflow-hidden rounded-[24px] shadow-2xl sm:min-h-[390px] md:min-h-[500px]">
             <Image
               src="/assets/state-comparison-2026.png"
               alt="Student comparing online driver education options at home"
@@ -149,9 +149,9 @@ export default function Home() {
         </div>
       </Wrapper>
 
-      <Wrapper styles="py-16 md:py-24">
+      <Wrapper styles="py-12 md:py-24">
         <div className="grid gap-6 lg:grid-cols-2">
-          <div className="card-surface p-7 md:p-9">
+          <div className="card-surface p-6 md:p-9">
             <p className="section-kicker">What learners value</p>
             <h2 className="mt-3 font-poppins text-[28px] font-semibold text-brand-navy">
               Confidence before checkout
@@ -162,7 +162,7 @@ export default function Home() {
               keeps those questions visible throughout the journey.
             </p>
           </div>
-          <div className="rounded-[20px] border border-amber-200 bg-amber-50 p-7 md:p-9">
+          <div className="rounded-[20px] border border-amber-200 bg-amber-50 p-6 md:p-9">
             <p className="section-kicker text-amber-700">Pricing and approval</p>
             <h2 className="mt-3 font-poppins text-[28px] font-semibold text-brand-navy">
               Provider terms control
