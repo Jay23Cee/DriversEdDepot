@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Wrapper from "../../components/Shared/ComponentWrapper/Wrapper";
 import Link from "next/link";
 import { Data } from "../../../Data/JSON";
+import Image from "next/image";
 import { FiMenu, FiX } from "react-icons/fi";
-import BrandLogo from "../../components/Shared/BrandLogo/BrandLogo";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,16 @@ function Header() {
       <Wrapper>
         <div className="flex h-[76px] items-center justify-between gap-6">
           <Link href="/" onClick={closeMenu} aria-label="Driver's Ed Depot homepage" className="shrink-0">
-            <BrandLogo priority />
+            <span className="relative block h-14 w-44 sm:h-16 sm:w-52">
+              <Image
+                src="/assets/drivers-ed-depot-header-logo.png"
+                fill
+                sizes="(min-width: 480px) 208px, 176px"
+                className="object-contain object-left"
+                alt="Driver's Ed Depot"
+                priority
+              />
+            </span>
           </Link>
           <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary navigation">
             {Data.Navibar.map((item) => (
